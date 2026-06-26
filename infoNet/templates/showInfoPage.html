@@ -1,0 +1,230 @@
+{% extends 'full_container.html' %}
+{% load i18n %}
+{% block contain %}
+
+{% if back_button %}
+<button id="back_btn" type="button" class="ant-btn css-cdzvx5 ant-btn-default ant-btn-color-default ant-btn-variant-outlined mb-6 flex items-center gap-2 hover:bg-blue-50 transition-colors">
+<span class="ant-btn-icon">
+<span role="img" aria-label="arrow-left" class="anticon anticon-arrow-left">
+<svg viewBox="64 64 896 896" focusable="false" data-icon="arrow-left" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M872 474H286.9l350.2-304c5.6-4.9 2.2-14-5.2-14h-88.5c-3.9 0-7.6 1.4-10.5 3.9L155 487.8a31.96 31.96 0 000 48.3L535.1 866c1.5 1.3 3.3 2 5.2 2h91.5c7.4 0 10.8-9.2 5.2-14L286.9 550H872c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z">
+</path>
+</svg>
+</span>
+</span>
+<span>back</span>
+</button>
+
+<script>
+document.getElementById('back_btn').addEventListener('click', ()=>{
+    window.location.href = "{% url back_link %}";
+})
+</script>
+<!-- <div class="p-6 mt-4 bg-white rounded-xl shadow-md">
+<div class="grid md:grid-cols-3 gap-6">
+<div class="md:col-span-2 space-y-4"> -->
+
+{% endif %}
+
+<div class="p-6 mt-4 bg-white rounded-xl shadow-md">
+    {% if show_photo %}
+<div class="grid md:grid-cols-3 gap-6">
+<div class="md:col-span-2 space-y-4">
+{% endif %}
+    {% if header %}
+<h3 class="text-2xl font-semibold text-blue-800 mb-2">{{ content.title }}</h3>
+{% endif %}
+<!-- <div class="grid md:grid-cols-2 gap-3"> -->
+{{ Text|safe }}
+<!-- <div class="md:col-span-2 space-y-4">
+<div class="">
+<p>
+<span style="font-size: 24px;">
+<strong>
+<span style="font-family: Times New Roman,Times,serif;">
+<span style="font-size: 24px;">Tahririyat kengashi raisi:</span>
+</span>
+</strong>
+<br>
+<span style="font-family: Times New Roman,Times,serif;">
+<span style="font-size: 18px;">
+<b>Sharipov Kongratbay Avezimbetovich</b>,</span>
+<br>
+<span style="font-size: 18px;">tex.f.d., prof., O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vaziri.</span>
+</span>
+</span>
+</p>
+<p>
+<span style="font-size: 24px;">
+<strong>
+<span style="font-family: Times New Roman,Times,serif;">
+<span style="font-size: 24px;">Tahrir kengashi aʼzolari:</span>
+</span>
+</strong>
+<br>
+<span style="font-family: &quot;Times New Roman&quot;, Times, serif; font-size: 18px;">
+<b>Salimov Oqil Umurzoqovich</b>, tex.f.d., prof., akademik, Isteʼdodli yoshlarni qo‘llab-quvvatlash “Ulug‘bek” jamg‘armasi rahbari</span>
+<br>
+<span style="font-family: &quot;Times New Roman&quot;, Times, serif; font-size: 18px;">
+<b>Turdikulova Shaxloxon Utkurovna</b>, b.f.d., prof., O‘zbekiston Respublikasi Fanlar Akademiyasi vitse-prezidenti</span>
+</span>
+</p>
+<p>
+<span style="font-size: 24px;">
+<span style="font-family: &quot;Times New Roman&quot;, Times, serif; font-size: 18px;">
+<b>Salomov Uktam Rahimovich</b>, fiz.f.d, prof., O‘zbekiston Respublikasi Oliy taʼlim, fan va innovatsiyalar vаziri o‘rinbosari</span>
+</span>
+</p>
+<p>
+<span style="font-size: 24px;">
+<span style="font-family: Times New Roman,Times,serif;">
+<span style="font-size: 18px;">
+<b>Norov Asror Egamberdiyevich</b>, i.f.n., (DSc), Oliy ta’lim, fan va innovatsiyalar vazirligi huzuridagi Innovatsion rivojlanish agentligi direktori v.v.b.</span>
+<br>
+<span style="font-size: 18px;">
+<b>Abduqunduzova Nazokat Usmonqulovna</b> Oliy ta’lim, fan va innovatsiyalar vazirligi axborot xizmati rahbari</span>
+</span>
+</span>
+</p>
+<p>
+<span style="font-size: 24px;">
+<span style="font-family: Times New Roman,Times,serif;">
+<span style="font-size: 18px;">
+<b>To‘ychiyev Olimjon Alijonovich</b>, tex.f.d. (DSc), Turin universiteti rektori&nbsp;</span>
+</span>
+</span>
+</p>
+<p>
+<span style="font-size: 24px;">
+<span style="font-family: &quot;Times New Roman&quot;, Times, serif; font-size: 18px;">
+<b>Raximov Bobur Kamolovich</b> i.f.f.d. (PhD), NazzAR loyihasi asoschisi</span>
+</span>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;</span>
+</p>
+<p>
+<b>
+<span style="font-size: 18pt; line-height: 107%; font-family: &quot;Times New Roman&quot;, serif;">&nbsp;Tahrir hay’ati a’zolari:</span>
+</b>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">
+<b>Raximov Farxod Xushboqovich</b>, tex.f.d, prof.,
+Ilmiy</span>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">-</span>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">texnik axborot markazi direktorining ilmiy-uslubiy
+ishlar bo‘yicha o‘rinbosari</span>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">
+<b>Saloyeva Hilola Ravshan qizi</b>, f.f.f. (PhD),
+Ilmiy</span>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">-</span>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">texnik axborot markazi Ilmiy tahririyat va noshirlik
+boshqarmasi boshlig‘i</span>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">
+<b>A’zamov Temur Narzullayevich</b>, tex.f.d. (DSc),
+Innovatsion rivojlanish agentligi Axborot kommunikatsiya texnologiyalarini
+joriy etish va raqamlashtirish boshqarmasi boshlig‘i</span>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">
+<b>Daminov </b>
+</span>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">
+<b>А</b>
+</span>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">
+<b>sror Mahmayusupovich</b>, tex.f.d. (DSc), Oliy taʼlim, fan
+va innovatsiyalar vazirligi Ilm-fan va innovatsion faoliyatni
+rivojlantirish&nbsp; boshqarmasi bosh</span>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;"> </span>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">mutaxassisi</span>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">
+<b>Sobirxonov Akbarxon Aziz o‘g‘li</b>, i.f.n. (PhD),
+Oliy ta’lim, fan va innovatsiyalar vazirligi&nbsp;
+Yoshlar akademiyasi faoliyatini muvofi qlashtirish bo‘limi boshlig‘i</span>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;</span>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;</span>
+<strong>
+<span style="font-size: 24px;">
+<span style="font-family: &quot;Times New Roman&quot;, Times, serif; font-size: 18px;">Ilmiy-texnik axborot markaz Direktori</span>
+</span>
+</strong>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;Nazirov Sardor Jamoliddin o‘g‘li</span>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;<b>Bosh muharrir</b>
+</span>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;</span>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">А</span>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">bdullayeva Sevara Erkinovna&nbsp;</span>
+</p>
+<p>
+<b>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">Muharrir</span>
+</b>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;Muhammadiyeva Fazilat Abdimurodovna</span>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;<b>Muxbirlar</b>
+</span>
+</p>
+<p style="line-height: 1;">
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;</span>
+<span style="color: oklch(0.278 0.033 256.848); font-family: &quot;Times New Roman&quot;, Times, serif; font-size: 20px;">Abdullayeva Nodira Rustamovna&nbsp;</span>
+</p>
+<span style="color: oklch(0.278 0.033 256.848); font-family: &quot;Times New Roman&quot;, Times, serif; font-size: 20px;">
+<p style="line-height: 1;">Mahkamova Gulbahor Hamzayevna</p>
+</span>
+<p>
+<b>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;Sahifalovchi dizayner</span>
+</b>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;<span style="font-size: 14pt;">Sapayev Umid Sadullayevich</span>
+<span style="font-size: 14pt;">&nbsp;</span>
+</span>
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;<b>Fotomuxbir</b>
+</span>
+</p>
+<p>
+
+</p>
+<p>
+<span style="font-size: 14.0pt; line-height: 107%; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;<span style="font-size: 14pt;">Axmadov Ahmadjon Mels o‘g‘li</span>
+</span>
+</p>
+</div>
+</div> -->
+
+{% if show_photo %}
+</div>
+<div class="flex justify-center">
+<img alt="Jurnal muqovasi" class=" h-80 rounded-lg shadow" src="{{ content.photo.url }}">
+
+</div>
+</div>
+{% endif %}
+
+</div>
+
+{% endblock %}

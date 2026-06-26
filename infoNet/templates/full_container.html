@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load app_tags %}
+{% block content %}
+<!--  -->
+<div class="fullContainer">
+<div class="ant-layout ant-layout-has-sider fullContainer relative css-cdzvx5" style="min-height: 100vh;">
+<aside id="side-list" class="ant-layout-sider ant-layout-sider-dark !site-layout-background !bg-white !pt-10 !custom-scrollbar overflow-y-auto transition-all duration-300 translate-x-0 fixed md:static css-cdzvx5" style="height: 100vh; position: sticky; top: 0px; z-index: 10; flex: 0 0 269px; max-width: 269px; min-width: 269px; width: 269px;">
+<div class="ant-layout-sider-children">
+<button id="close side-list" class="md:hidden bg-gray-200 p-1 rounded-md z-40 absolute top-4 right-4">
+<span role="img" aria-label="close" class="anticon anticon-close">
+<svg fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z">
+</path>
+</svg>
+</span>
+</button>
+<!--  -->
+<ul class="ant-menu ant-menu-root ant-menu-inline ant-menu-light !text-[16px] css-cdzvx5" role="menu" tabindex="0" data-menu-list="true">
+<!-- f -->
+    <li id="side_menu_li" class="ant-menu-submenu ant-menu-submenu-inline ant-menu-submenu-open ant-menu-submenu-selected" role="none">
+<div id="side_menu_div" role="menuitem" class="ant-menu-submenu-title" tabindex="-1" aria-expanded="true" aria-haspopup="true" data-menu-id="rc-menu-uuid-77845-4-new" aria-controls="rc-menu-uuid-77845-4-new-popup" style="padding-left: 24px;">
+<span class="ant-menu-title-content">{{side_list.title}}</span>
+<i id="side_menu_btn" class="ant-menu-submenu-arrow">
+</i>
+</div>
+<ul id="side_menu_elements" class="ant-menu ant-menu-sub ant-menu-inline" role="menu" data-menu-list="true" id="rc-menu-uuid-77845-4-new-popup">
+{% for values2 in side_list.sub_topic %}
+<li role="menuitem" tabindex="-1" class="ant-menu-item ant-menu-item ant-menu-item-only-child" data-menu-id="rc-menu-uuid-77845-4-/new/news" style="padding-left: 48px;">
+<span class="ant-menu-title-content">
+    {% check_link element=values2 text=values2.title %}
+     </span>
+
+</li> 
+<ul class="ant-menu ant-menu-sub ant-menu-inline" role="menu" data-menu-list="true" id="rc-menu-uuid-77845-4-new-popup">
+    <!-- <span class="ant-menu-title-content">Ilm-fan va innovatsion rivojlanish</span><i class="ant-menu-submenu-arrow"></i></div> -->
+    {% for el in values2.sub_topic %}
+    <li role="menuitem" tabindex="-1" class="ant-menu-item ant-menu-item-selected ant-menu-item-only-child" data-menu-id="rc-menu-uuid-77845-4-/new/news" style="padding-left: 48px;">
+<div role="menuitem" class="ant-menu-submenu-title" tabindex="-1" aria-expanded="true" aria-haspopup="true" data-menu-id="rc-menu-uuid-00188-45-publication/science-inno" aria-controls="rc-menu-uuid-00188-45-publication/science-inno-popup" style="padding-left: 48px;">
+<span class="ant-menu-title-content">
+    {% check_link element=el text=el.title %}
+    </span>
+</div>
+    </li>
+    {% endfor %}
+</ul>
+{% endfor %}
+</ul>
+</li>
+<!-- f -->
+</ul>
+<script>
+side_menu_li = document.getElementById('side_menu_li');
+side_menu_div = document.getElementById('side_menu_div');
+side_menu_el = document.getElementById('side_menu_elements');
+let sidescrollopen=true;
+
+side_menu_div.addEventListener('click', ()=>{
+  sidescrollopen = !sidescrollopen;
+  console.log(sidescrollopen);
+  if (sidescrollopen){
+        side_menu_li.setAttribute('class', 'ant-menu-submenu ant-menu-submenu-inline ant-menu-submenu-open ant-menu-submenu-selected');
+        side_menu_el.setAttribute('class', "ant-menu ant-menu-sub ant-menu-inline");
+    
+  }  
+  else{        
+      side_menu_li.setAttribute('class', 'ant-menu-submenu ant-menu-submenu-inline ant-menu-submenu-selected ');
+      side_menu_el.setAttribute('class', "ant-menu ant-menu-sub ant-menu-inline ant-menu-hidden");
+  }
+  side_menu_div.setAttribute('aria-expanded', sidescrollopen);  
+});
+
+const side_list = document.getElementById('side-list');
+window.addEventListener("resize", () => {
+    if (window.innerWidth < 590) {
+        side_list.classList.remove("translate-x-0");
+        side_list.classList.add("translate-x-full");
+
+    } else {
+        side_list.classList.remove("translate-x-full");
+        side_list.classList.add("translate-x-0");
+    }
+    console.log(window.innerWidth);
+});
+
+document.getElementById("close side-list").addEventListener("click", () => {
+    side_list.classList.remove("translate-x-0");
+    side_list.classList.add("translate-x-full");
+});
+
+
+</script>
+<!--  -->
+<div aria-hidden="true" style="display: none;">
+</div>
+<div class="absolute z-30   bottom-[5%] md:right-6 space-y-2">
+</div>
+</div>
+</aside>
+<div class="ant-layout max-[767px]:ml-[-270px]  css-cdzvx5" style="padding: 0px 14px 14px;">
+    <!--  -->
+<main class="ant-layout-content css-cdzvx5" style="padding: 2px; margin: 0px; min-height: 280px; position: relative;">
+    {% block contain %}
+    {% endblock %}
+</main>
+<!--  -->
+</div>
+</div>
+</div>
+<!--  -->
+{% endblock %}

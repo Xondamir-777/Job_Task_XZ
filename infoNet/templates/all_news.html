@@ -1,0 +1,206 @@
+{% extends 'full_container.html' %}
+{% load i18n %}
+{% load static %}
+{% load app_tags %}
+{% block contain %}
+<div class="flex flex-col gap-6 mt-4 bg-white p-4 rounded-xl">
+<h1 class="text-3xl text-center font-bold text-gray-800">{{ title }}</h1>
+<div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+    
+<!-- <div class="ant-row css-cdzvx5" style="margin-left: -8px; margin-right: -8px; row-gap: 16px;"> -->
+    <form method="get" class="ant-row css-cdzvx5" style="margin-left: -8px; margin-right: -8px; row-gap: 16px;">
+<div class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-lg-8 css-cdzvx5" style="padding-left: 8px; padding-right: 8px;">
+<span class="ant-input-affix-wrapper css-cdzvx5 ant-input-outlined w-full">
+<input placeholder="Qidiruv (sarlavha yoki matn)" class="ant-input css-cdzvx5" type="text" value="" name="title_serch">
+<span class="ant-input-suffix">
+<button type="button" class="ant-input-clear-icon ant-input-clear-icon-hidden">
+<span role="img" aria-label="close-circle" class="anticon anticon-close-circle">
+<svg fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" data-icon="close-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M512 64c247.4 0 448 200.6 448 448S759.4 960 512 960 64 759.4 64 512 264.6 64 512 64zm127.98 274.82h-.04l-.08.06L512 466.75 384.14 338.88c-.04-.05-.06-.06-.08-.06a.12.12 0 00-.07 0c-.03 0-.05.01-.09.05l-45.02 45.02a.2.2 0 00-.05.09.12.12 0 000 .07v.02a.27.27 0 00.06.06L466.75 512 338.88 639.86c-.05.04-.06.06-.06.08a.12.12 0 000 .07c0 .03.01.05.05.09l45.02 45.02a.2.2 0 00.09.05.12.12 0 00.07 0c.02 0 .04-.01.08-.05L512 557.25l127.86 127.87c.04.04.06.05.08.05a.12.12 0 00.07 0c.03 0 .05-.01.09-.05l45.02-45.02a.2.2 0 00.05-.09.12.12 0 000-.07v-.02a.27.27 0 00-.05-.06L557.25 512l127.87-127.86c.04-.04.05-.06.05-.08a.12.12 0 000-.07c0-.03-.01-.05-.05-.09l-45.02-45.02a.2.2 0 00-.09-.05.12.12 0 00-.07 0z">
+</path>
+</svg>
+</span>
+</button>
+</span>
+</span>
+</div>
+<div class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-lg-8 css-cdzvx5" style="padding-left: 8px; padding-right: 8px;">
+<div class="ant-picker ant-picker-range ant-picker-outlined css-cdzvx5 w-full">
+<div class="ant-picker-input">
+<input type="date" aria-invalid="false" autocomplete="off" size="12" placeholder="Boshlanish" date-range="start" value=""  name="start_date">
+</div>
+<div class="ant-picker-range-separator">
+<span aria-label="to" class="ant-picker-separator">
+<span role="img" aria-label="swap-right" class="anticon anticon-swap-right">
+<svg viewBox="0 0 1024 1024" focusable="false" data-icon="swap-right" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M873.1 596.2l-164-208A32 32 0 00684 376h-64.8c-6.7 0-10.4 7.7-6.3 13l144.3 183H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h695.9c26.8 0 41.7-30.8 25.2-51.8z">
+</path>
+</svg>
+</span>
+</span>
+</div>
+<div class="ant-picker-input">
+<input type="date" name="finish_date"  aria-invalid="false" autocomplete="off" size="12" placeholder="Tugash" date-range="end" value="">
+</div>
+<div class="ant-picker-active-bar" style="position: absolute; width: 0px;">
+</div>
+<span class="ant-picker-suffix">
+<span role="img" aria-label="calendar" class="anticon anticon-calendar">
+<!-- <svg viewBox="64 64 896 896" focusable="false" data-icon="calendar" width="1em" height="1em" fill="currentColor" aria-hidden="true"> -->
+<path d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zM184 392V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136H184z">
+</path>
+</svg>
+</span>
+</span>
+</div>
+</div>
+<button type="submit">Поиск</button>
+</form>
+
+<!-- </div> -->
+</div>
+<!--  -->
+
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+    {% for news in content %}
+    {% show_simple_post element=news post_style=style %}
+{% endfor %}
+<!-- <div class="flex flex-col gap-2 !border-gray-200 md:flex-row border shadow-lg transition-shadow duration-300 ease-in-out bg-white p-4 rounded-lg cursor-pointer">
+<img src="./CSTI_files/photo_2026-05-08_14-50-51.jpg" alt="The Ohio State Universityda ilmiy hamkorlik va axborot tizimlari masalalari muhokama qilindi" class="rounded-md w-full md:w-[40%] h-32 object-cover">
+<div class="md:w-[60%] w-full pl-4 flex flex-col justify-between">
+<div class="text-lg text-gray-500 mb-2 flex items-start gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar1 lucide-calendar-1 text-gray-800" aria-hidden="true">
+<path d="M11 14h1v4">
+</path>
+<path d="M16 2v4">
+</path>
+<path d="M3 10h18">
+</path>
+<path d="M8 2v4">
+</path>
+<rect x="3" y="4" width="18" height="18" rx="2">
+</rect>
+</svg>2026-05-07</div>
+<h2 class="text-lg  font-semibold mt-2 line-clamp-3">The Ohio State Universityda ilmiy hamkorlik va axborot tizimlari masalalari muhokama qilindi</h2>
+</div>
+</div>
+<div class="flex flex-col gap-2 !border-gray-200 md:flex-row border shadow-lg transition-shadow duration-300 ease-in-out bg-white p-4 rounded-lg cursor-pointer">
+<img src="./CSTI_files/photo_2026-05-06_18-20-54.jpg" alt="Xalqaro aloqalar kengaymoqda. AQShning Chicago Council on Science and Technology tashkiloti ijrochi direktori Alexandra Prokuda bilan uchrashuv o‘tkazildi." class="rounded-md w-full md:w-[40%] h-32 object-cover">
+<div class="md:w-[60%] w-full pl-4 flex flex-col justify-between">
+<div class="text-lg text-gray-500 mb-2 flex items-start gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar1 lucide-calendar-1 text-gray-800" aria-hidden="true">
+<path d="M11 14h1v4">
+</path>
+<path d="M16 2v4">
+</path>
+<path d="M3 10h18">
+</path>
+<path d="M8 2v4">
+</path>
+<rect x="3" y="4" width="18" height="18" rx="2">
+</rect>
+</svg>2026-05-05</div>
+<h2 class="text-lg  font-semibold mt-2 line-clamp-3">Xalqaro aloqalar kengaymoqda. AQShning Chicago Council on Science and Technology tashkiloti ijrochi direktori Alexandra Prokuda bilan uchrashuv o‘tkazildi.</h2>
+</div>
+</div>
+<div class="flex flex-col gap-2 !border-gray-200 md:flex-row border shadow-lg transition-shadow duration-300 ease-in-out bg-white p-4 rounded-lg cursor-pointer">
+<img src="./CSTI_files/photo_2026-05-06_18-16-45.jpg" alt="Xalqaro hamkorlik AQShdagi yetakchi universitetlar bilan uchrashuvlar o‘tkazildi." class="rounded-md w-full md:w-[40%] h-32 object-cover">
+<div class="md:w-[60%] w-full pl-4 flex flex-col justify-between">
+<div class="text-lg text-gray-500 mb-2 flex items-start gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar1 lucide-calendar-1 text-gray-800" aria-hidden="true">
+<path d="M11 14h1v4">
+</path>
+<path d="M16 2v4">
+</path>
+<path d="M3 10h18">
+</path>
+<path d="M8 2v4">
+</path>
+<rect x="3" y="4" width="18" height="18" rx="2">
+</rect>
+</svg>2026-05-04</div>
+<h2 class="text-lg  font-semibold mt-2 line-clamp-3">Xalqaro hamkorlik AQShdagi yetakchi universitetlar bilan uchrashuvlar o‘tkazildi.</h2>
+</div>
+</div>
+<div class="flex flex-col gap-2 !border-gray-200 md:flex-row border shadow-lg transition-shadow duration-300 ease-in-out bg-white p-4 rounded-lg cursor-pointer">
+<img src="./CSTI_files/photo_2026-05-06_18-10-18.jpg" alt="Jahon ekspertlari bir maydonda: Boston konferensiyasida nimalar muhokama qilindi?" class="rounded-md w-full md:w-[40%] h-32 object-cover">
+<div class="md:w-[60%] w-full pl-4 flex flex-col justify-between">
+<div class="text-lg text-gray-500 mb-2 flex items-start gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar1 lucide-calendar-1 text-gray-800" aria-hidden="true">
+<path d="M11 14h1v4">
+</path>
+<path d="M16 2v4">
+</path>
+<path d="M3 10h18">
+</path>
+<path d="M8 2v4">
+</path>
+<rect x="3" y="4" width="18" height="18" rx="2">
+</rect>
+</svg>2026-04-28</div>
+<h2 class="text-lg  font-semibold mt-2 line-clamp-3">Jahon ekspertlari bir maydonda: Boston konferensiyasida nimalar muhokama qilindi?</h2>
+</div>
+</div>
+<div class="flex flex-col gap-2 !border-gray-200 md:flex-row border shadow-lg transition-shadow duration-300 ease-in-out bg-white p-4 rounded-lg cursor-pointer">
+<img src="./CSTI_files/photo_2026-05-06_18-06-17.jpg" alt="Xalqaro hamkorlik Boston Public Libraryda uchrashuv: axborot resurslari va hamkorlik masalalari muhokama qilindi" class="rounded-md w-full md:w-[40%] h-32 object-cover">
+<div class="md:w-[60%] w-full pl-4 flex flex-col justify-between">
+<div class="text-lg text-gray-500 mb-2 flex items-start gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar1 lucide-calendar-1 text-gray-800" aria-hidden="true">
+<path d="M11 14h1v4">
+</path>
+<path d="M16 2v4">
+</path>
+<path d="M3 10h18">
+</path>
+<path d="M8 2v4">
+</path>
+<rect x="3" y="4" width="18" height="18" rx="2">
+</rect>
+</svg>2026-04-25</div>
+<h2 class="text-lg  font-semibold mt-2 line-clamp-3">Xalqaro hamkorlik Boston Public Libraryda uchrashuv: axborot resurslari va hamkorlik masalalari muhokama qilindi</h2>
+</div>
+</div>
+<div class="flex flex-col gap-2 !border-gray-200 md:flex-row border shadow-lg transition-shadow duration-300 ease-in-out bg-white p-4 rounded-lg cursor-pointer">
+<img src="./CSTI_files/photo_2026-05-06_17-35-23.jpg" alt="Xalqaro hamkorlik MIT bilan muloqot o‘tkazildi, innovatsion hamkorlik istiqbollari muhokama qilindi" class="rounded-md w-full md:w-[40%] h-32 object-cover">
+<div class="md:w-[60%] w-full pl-4 flex flex-col justify-between">
+<div class="text-lg text-gray-500 mb-2 flex items-start gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar1 lucide-calendar-1 text-gray-800" aria-hidden="true">
+<path d="M11 14h1v4">
+</path>
+<path d="M16 2v4">
+</path>
+<path d="M3 10h18">
+</path>
+<path d="M8 2v4">
+</path>
+<rect x="3" y="4" width="18" height="18" rx="2">
+</rect>
+</svg>2026-04-22</div>
+<h2 class="text-lg  font-semibold mt-2 line-clamp-3">Xalqaro hamkorlik MIT bilan muloqot o‘tkazildi, innovatsion hamkorlik istiqbollari muhokama qilindi</h2>
+</div>
+</div>
+<div class="flex flex-col gap-2 !border-gray-200 md:flex-row border shadow-lg transition-shadow duration-300 ease-in-out bg-white p-4 rounded-lg cursor-pointer">
+<img src="./CSTI_files/photo_2026-05-06_17-35-23_bGAafe5.jpg" alt="Xalqaro hamkorlik MIT bilan muloqot o‘tkazildi, innovatsion hamkorlik istiqbollari muhokama qilindi" class="rounded-md w-full md:w-[40%] h-32 object-cover">
+<div class="md:w-[60%] w-full pl-4 flex flex-col justify-between">
+<div class="text-lg text-gray-500 mb-2 flex items-start gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar1 lucide-calendar-1 text-gray-800" aria-hidden="true">
+<path d="M11 14h1v4">
+</path>
+<path d="M16 2v4">
+</path>
+<path d="M3 10h18">
+</path>
+<path d="M8 2v4">
+</path>
+<rect x="3" y="4" width="18" height="18" rx="2">
+</rect>
+</svg>2026-04-22</div>
+<h2 class="text-lg  font-semibold mt-2 line-clamp-3">Xalqaro hamkorlik MIT bilan muloqot o‘tkazildi, innovatsion hamkorlik istiqbollari muhokama qilindi</h2>
+</div>
+</div> -->
+</div>
+<!--  -->
+{% paginate_tag request paginator page_obj numbers%}
+</div>
+
+{% endblock %}

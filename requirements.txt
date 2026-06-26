@@ -1,0 +1,10 @@
+Django
+gunicorn
+psycopg[binary]
+whitenoise
+django-modeltranslation
+django-debug-toolbar
+django-ckeditor
+Pillow
+django-storages
+boto3

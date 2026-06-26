@@ -1,0 +1,106 @@
+{% extends 'full_container.html' %}
+{% load i18n %}
+{% block contain %}
+<div class="bg-white w-full shadow-2xl rounded-2xl mt-4 flex flex-col md:flex-row overflow-hidden">
+<div class="bg-[#0C57A6] text-white p-10 flex flex-col justify-center">
+<h2 class="text-4xl font-bold mb-4">{% trans "Biz bilan bog'laning" %}</h2>
+<ul class="space-y-4">
+{% for key, val in our_contacts.items %}
+    <li>
+<strong>{{key}}:</strong>
+{% if val.link %}
+<a href="{{ val.link }}" type="{{ val.type }}">{{ val.txt }}</a>
+{% else %}
+{{ val.txt }}
+{% endif %}
+</li>
+{% endfor %}</ul>
+</div>
+<div class="md:w-1/2 p-10">
+<h3 class="text-2xl font-bold text-gray-800 mb-6">{% trans "Xabar yuboring" %}</h3>
+<form class="ant-form ant-form-vertical css-cdzvx5 space-y-6" method="post">
+{% csrf_token %}
+    <div class="ant-form-item css-cdzvx5">
+<div class="ant-row ant-form-item-row css-cdzvx5">
+<div class="ant-col ant-form-item-label css-cdzvx5">
+<label for="full_name" class="ant-form-item-required" title="Ismingiz">{% trans "Ismingiz" %}</label>
+</div>
+<!-- <div class="ant-col ant-form-item-control css-cdzvx5">
+<div class="ant-form-item-control-input">
+<div class="ant-form-item-control-input-content"> -->
+<input placeholder="{% trans "F.I.Sh" %}" id="full_name" aria-required="true" class="w-full ant-input ant-input-lg css-cdzvx5 ant-input-outlined" type="text"  value="{{ request.POST.full_name|default:'' }}" name="full_name">
+<!-- </div>
+</div>
+</div> -->
+</div>
+</div>
+<div class="ant-form-item css-cdzvx5">
+<div class="ant-row ant-form-item-row css-cdzvx5">
+<div class="ant-col ant-form-item-label css-cdzvx5">
+<label for="email" class="ant-form-item-required" title="{% trans "Email manzilingiz" %}">{% trans "Email manzilingiz" %}</label>
+</div>
+<!-- <div class="ant-col ant-form-item-control css-cdzvx5">
+<div class="ant-form-item-control-input">
+<div class="ant-form-item-control-input-content"> -->
+<input placeholder="siz@example.com" id="email" aria-required="true" class="ant-input ant-input-lg css-cdzvx5 ant-input-outlined" type="text" value="{{ request.POST.email|default:'' }}" name="email">
+<!-- </div>
+</div>
+</div> -->
+</div>
+</div>
+<div class="ant-form-item css-cdzvx5">
+<div class="ant-row ant-form-item-row css-cdzvx5">
+<div class="ant-col ant-form-item-label css-cdzvx5">
+<label for="phone" class="ant-form-item-required" title="Telefon raqamingiz">Telefon raqamingiz</label>
+<br>
+</div>
+<!-- <div class="ant-col ant-form-item-control css-cdzvx5">
+<div class="ant-form-item-control-input">
+<div class="ant-form-item-control-input-content"> -->
+<input placeholder="+998901234567" id="phone" aria-required="true" class="ant-input ant-input-lg css-cdzvx5 ant-input-outlined" type="tel" value="{{ request.POST.phone|default:'' }}" name="phone">
+<!-- </div>
+</div>
+</div> -->
+<!--  -->
+</div>
+</div>
+<div class="ant-form-item css-cdzvx5">
+<div class="ant-row ant-form-item-row css-cdzvx5">
+<div class="ant-col ant-form-item-label css-cdzvx5">
+<label for="message" class="ant-form-item-required" title="{% trans "Xabaringiz" %}">{% trans "Xabaringiz" %}</label>
+</div>
+<!-- <div class="ant-col ant-form-item-control css-cdzvx5">
+<div class="ant-form-item-control-input">
+<div class="ant-form-item-control-input-content"> -->
+<textarea rows="4" placeholder="{% trans "Xabaringizni shu yerga yozing..." %}" id="message" aria-required="true" class="ant-input ant-input-lg css-cdzvx5 ant-input-outlined"  name="message">{{ request.POST.message }}</textarea>
+<!-- </div>
+</div>
+</div> -->
+</div>
+</div>
+{% if error %}
+<div class="ant-form-item css-cdzvx5">
+<div class="ant-row ant-form-item-row css-cdzvx5">
+<div class="ant-col ant-form-item-label css-cdzvx5">
+<label for="phone" class="ant-form-item-required !text-blue-800" title="error">{% trans "Nimadir xato ketdi! " %} </label>
+</div>
+</div>
+</div>
+{% endif %}
+<div class="ant-form-item css-cdzvx5">
+<div class="ant-row ant-form-item-row css-cdzvx5">
+<div class="ant-col ant-form-item-control css-cdzvx5">
+<div class="ant-form-item-control-input">
+<div class="ant-form-item-control-input-content">
+<button type="submit" class="ant-btn css-cdzvx5 ant-btn-primary ant-btn-color-primary ant-btn-variant-solid ant-btn-lg w-full bg-blue-600 hover:bg-blue-700">
+<span>{% trans "Xabar yuborish" %}</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+{% endblock %}

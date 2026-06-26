@@ -1,0 +1,131 @@
+{% extends 'full_container.html' %}
+{% load i18n %}
+{% load app_tags %}
+{% block contain %}
+
+<div class=" mx-auto px-4 py-10 bg-white rounded-2xl mt-4 ">
+<h2 class="text-3xl font-bold   mb-10">{{ title }}</h2>
+{% for el in content %}
+{% show_simple_post element=el post_style=style %}
+<!-- <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+<a href="http://pivot.proquest.com" target="_blank" rel="noopener noreferrer">
+<div class="flex items-center gap-3 mb-4 underline">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open text-blue-600" aria-hidden="true">
+<path d="M12 7v14">
+</path>
+<path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+</path>
+</svg>
+<h3 class="text-xl font-semibold ">Pivot-RP</h3>
+</div>
+</a>
+<div class="prose max-w-full text-sm text-gray-800">
+<p>Pivot-RP — bu ilmiy grantlar, stipendiyalar, konferensiyalar va boshqa imkoniyatlarni topishga mo‘ljallangan platforma. Uni ham Clarivate kompaniyasi taklif etadi.</p>
+<p>Asosiy xususiyatlari:</p>
+<p>20 mingdan ortiq faol moliyalashtirish manbalari</p>
+<p>3 milliondan ortiq tadqiqotchi profiliga asoslangan moslik tizimi</p>
+<p>Filtrlash, saqlash, email ogohlantirish kabi qulay vositalar</p>
+<p>Imkoniyatlari:</p>
+<p>Shaxsiy profil yaratish orqali sizga mos grantlarni avtomatik topish</p>
+<p>Mahalliy va xalqaro darajadagi fondlar, xususan Yevropa Ittifoqi, AQSh, BMT va boshqa manbalarni qamrab oladi</p>
+<p>Institut va guruh darajasida grant qidirish tizimi</p>
+<p>Kimlar uchun foydali:</p>
+<p>Ilmiy tashkilotlar, universitetlar, grant izlovchi tadqiqotchilar, doktorantlar va loyiha menejerlari.</p>
+</div>
+</div>
+<div class="bg-white border border-gray-200 rounded-xl p-6 mb-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+<a href="http://webofscience.com" target="_blank" rel="noopener noreferrer">
+<div class="flex items-center gap-3 mb-4 underline">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open text-blue-600" aria-hidden="true">
+<path d="M12 7v14">
+</path>
+<path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+</path>
+</svg>
+<h3 class="text-xl font-semibold ">Web of Science</h3>
+</div>
+</a>
+<div class="prose max-w-full text-sm text-gray-800">
+<p>Web of Science — bu dunyodagi eng nufuzli va ob’ektiv ilmiy referativ va indeksatsiya qiluvchi ma’lumotlar bazasidir. U Clarivate kompaniyasi tomonidan yuritiladi.</p>
+<p>Asosiy xususiyatlari:</p>
+<p>Ilmiy maqolalar va jurnallar bo‘yicha global qamrov</p>
+<p>Impact Factor, H-index, citation analysis kabi bibliometrik ko‘rsatkichlar mavjud</p>
+<p>Science Citation Index Expanded (SCIE), Social Sciences Citation Index (SSCI) va boshqa indekslar orqali tartiblangan</p>
+<p>Foydalanuvchilarga imkoniyatlari:</p>
+<p>Ilmiy maqolalarni topish, tahlil qilish</p>
+<p>Mualliflar, tashkilotlar va mamlakatlar kesimida tahlillar</p>
+<p>Mos jurnal topish (Journal Finder)</p>
+<p>&nbsp;Kimlar uchun foydali:</p>
+<p>Olimlar, doktorantlar, ilmiy-tadqiqotchilar, universitetlar, ilmiy nashrlar tahririyati.</p>
+</div>
+</div>
+<div class="bg-white border border-gray-200 rounded-xl p-6 mb-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+<a href="http://experiments.springernature.com" target="_blank" rel="noopener noreferrer">
+<div class="flex items-center gap-3 mb-4 underline">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open text-blue-600" aria-hidden="true">
+<path d="M12 7v14">
+</path>
+<path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+</path>
+</svg>
+<h3 class="text-xl font-semibold ">experiments springer nature</h3>
+</div>
+</a>
+<div class="prose max-w-full text-sm text-gray-800">
+<p>Bu platforma biologiya va tibbiyot sohasidagi eksperimental protokollar va laboratoriya metodlarini taqdim etadi. Tadqiqotchilar uchun amaliy qo‘llanma sifatida xizmat qiladi.</p>
+<p>Xususiyatlari:</p>
+<p>Ma’lumotlar SpringerProtocols, Nature Protocols, va Protocols Exchange kabi manbaalardan olinadi</p>
+<p>Qadam-baqadam laboratoriya uslublari</p>
+<p>Qidiruv tizimi tajriba turi, organizm, texnologiya bo‘yicha filtrlash imkonini beradi</p>
+<p>Foydalanuvchilar uchun foydasi:</p>
+<p>• Tadqiqot ishlarini takrorlash yoki yangi metodlarni o‘zlashtirish uchun qulay manba</p>
+</div>
+</div>
+<div class="bg-white border border-gray-200 rounded-xl p-6 mb-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+<a href="http://nature.com" target="_blank" rel="noopener noreferrer">
+<div class="flex items-center gap-3 mb-4 underline">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open text-blue-600" aria-hidden="true">
+<path d="M12 7v14">
+</path>
+<path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+</path>
+</svg>
+<h3 class="text-xl font-semibold ">Nature</h3>
+</div>
+</a>
+<div class="prose max-w-full text-sm text-gray-800">
+<p>Nature brendi ostida nashr etiladigan eng yuqori impakt-faktorga ega jurnallar to‘plami. Bu platforma asosan ilg‘or ilmiy tadqiqotlar va fundamental kashfiyotlarni yoritadi.</p>
+<p>Nashrlar qamrovi:</p>
+<p>Asosiy jurnal: Nature</p>
+<p>Ixtisoslashgan jurnallar: Nature Genetics, Nature Physics, Nature Medicine, va boshqalar.</p>
+<p>Afzalliklari:</p>
+<p>• Dunyodagi eng nufuzli ilmiy maqolalarni o‘z ichiga oladi</p>
+<p>• Ochiq va obuna asosidagi kontent aralashmasi</p>
+</div>
+</div>
+<div class="bg-white border border-gray-200 rounded-xl p-6 mb-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+<a href="https://link.springer.com" target="_blank" rel="noopener noreferrer">
+<div class="flex items-center gap-3 mb-4 underline">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open text-blue-600" aria-hidden="true">
+<path d="M12 7v14">
+</path>
+<path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+</path>
+</svg>
+<h3 class="text-xl font-semibold ">Springer</h3>
+</div>
+</a>
+<div class="prose max-w-full text-sm text-gray-800">
+<p>Springer Nature’ning asosiy ilmiy kontent platformasi hisoblanadi. Bu yerda foydalanuvchilar quyidagilarni topishlari mumkin:</p>
+<p>Ilmiy jurnallardagi maqolalar,</p>
+<p>Kitoblar, darsliklar va monografiyalar,</p>
+<p>Konferensiya materiallari.</p>
+<p>Yo‘nalishlar: tabiiy fanlar, muhandislik, texnika, biomeditsina, ijtimoiy fanlar va boshqalar.</p>
+<p>Foydalanuvchilar uchun qulaylik:</p>
+<p>• Muallif, sarlavha yoki DOI orqali tezkor qidiruv</p>
+<p>• PDF va HTML ko‘rinishdagi maqolalarni yuklab olish (agar obuna bo‘lsa)</p>
+</div>
+</div> -->
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,564 @@
+{% extends 'full_container.html' %}
+{% load i18n %}
+{% load static %}
+{% block contain %}
+
+<div class=" mx-auto  bg-white rounded-xl shadow-lg mt-4 p-4 font-sans border border-gray-100">
+<div class="mb-6">
+<h1 class="text-3xl font-bold text-gray-800 mb-2">{{ content.title }}</h1>
+</div>
+<div class="mb-8">
+<img alt="World Bank Logo" class="w-full max-h-[400px] object-cover mx-auto mb-4" src="{{ content.photo.url }}">
+</div>
+<div class="mb-8 bg-gray-50 p-6 rounded-lg">
+     {{ content.content|safe }}
+<!-- <p style="">
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">﻿</span>
+<span style="font-size: 18px;">﻿</span>
+<span style="font-size: 14.0pt;">
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">
+<b>Oʻzbekiston Respublikasi
+Vazirlar Mahkamasining “Xalqaro taraqqiyot uyushmasi ishtirokida “Oʻzbekiston milliy
+innovatsion tizimini modernizatsiya qilish” loyihasini amalga oshirish
+chora-tadbirlari toʻgʻrisida” 2021-yil 3-apreldagi 172-son qaroriga asosan
+“Oʻzbekiston milliy innovatsion tizimini modernizatsiya qilish” loyihasi doirasida
+“Ilmiy tashkilotlarni modernizatsiya qilish” (Public Research Institutes Modernization)
+dasturini amalga oshirish belgilangan.</b>
+</span>
+</span>
+</p>
+<p style="">
+<span style="font-size: 14.0pt;">
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">
+<b>
+<br>
+</b>
+</span>
+</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">
+<b>PRIM dasturi O‘zbekistondagi davlat ilmiy-tadqiqot
+institutlarining institutsional modernizatsiya rejalarini ishlab chiqish va
+amalga oshirish bo‘yicha strategik qarash va yondashuvni shakllantirishga
+qaratilgan.</b>
+</span>
+</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">
+<b>
+<br>
+</b>
+</span>
+</span>
+</p>
+<p style="">
+<span>
+<span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">
+<b>PRIM dasturining asosiy maqsadlari quyidagilardan
+iborat:</b>
+</span>
+</span>
+</p>
+<p style="">
+<span>
+<span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">
+<br>
+</span>
+</span>
+</p>
+<ul style="">
+ <li style="">
+<span>
+<span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">Davlat ilmiy-tadqiqot institutlarining (DTI)
+     institutsional modernizatsiya jarayonini jadallashtirish.</span>
+</span>
+</li>
+ <li style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">DTIlarning uzoq muddatli islohot strategiyasiga
+     muvofiq chora-tadbirlarni amalga oshirish uchun moliyaviy yordam va
+     qo‘llab-quvvatlashni ta’minlash.</span>
+</span>
+</li>
+ <li style="">
+<span>
+<span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">Davlat ilmiy-tadqiqot institutlarining
+     samaradorligi, natijadorligi va umumiy mahsuldorligini oshirish.</span>
+</span>
+</li>
+ <li style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">DTIlarning ustuvor yo‘nalishlari – salohiyatni
+     oshirish, strategik rejalashtirish va boshqaruv, bilim almashinuvi,
+     ilm-fan va sanoat hamkorligi, hamda jamoatchilik bilan o‘zaro aloqalar
+     kabi sohalarda ehtiyojlarini qo‘llab-quvvatlash.</span>
+</span>
+</li>
+ <li style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">DTIlarning milliy va xalqaro darajadagi nufuzini
+     oshirish.</span>
+</span>
+</li>
+</ul>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">PRIM Grant Dasturi O‘zbekistondagi davlat
+ilmiy-tadqiqot tashkilotlarining strategik modernizatsiya jarayonida
+katalizator vazifasini bajaradi. PRIM resurslari DTIlarning ilmiy-tadqiqot
+faoliyatiga asoslangan dasturlarida muhim maqsad va vazifalarga erishishda
+qo‘shimcha tayanch vositasi sifatida xizmat qilishi mumkin.</span>
+</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">
+<br>
+</span>
+</span>
+</p>
+<p style="">
+<b>
+<span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">PRIM Grant
+Dasturining ustunlari:</span>
+</b>
+</p>
+<p style="">
+<b>
+<span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">
+<br>
+</span>
+</b>
+</p>
+<p style="">
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">1</span>.<span style="font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 18pt;">
+</span>
+</span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy-tadqiqot
+infratuzilmasi</span>
+</p>
+<p style="">
+<span style="font-family: &quot;Times New Roman&quot;;">
+<span style="font-size: 18px;">2</span>.</span>
+<span style="font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+<span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">Salohiyatni
+oshirish</span>
+</p>
+<p style="">
+<span style="font-size: 18px;">3.</span>
+<span style="font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Strategik
+rejalashtirish va boshqaruv</span>
+</p>
+<p style="">
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">4</span>.<span style="font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Bilim
+almashinuvi va tarqatish</span>
+</p>
+<p style="">
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">5</span>
+<span style="font-size: 18px;">.</span>
+<span style="font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 18pt;">
+</span>
+</span>
+<span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">Ilm-fan
+va biznes hamkorligi</span>
+</p>
+<p style="">
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">6</span>.<span style="font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Jamoatchilik
+bilan hamkorlik va ochiqlik</span>
+</p>
+<p style="">
+<span style="font-size: 18pt; font-family: &quot;Times New Roman&quot;;">&nbsp;</span>
+</p>
+<p style="">
+<span style="font-size: 14.0pt;">
+<span style="font-size: 18pt; font-family: &quot;Times New Roman&quot;;">
+<span style="font-size: 14pt;">Xalqaro Ekspertlar
+Kengashi tomonidan Ilmiy-texnik axborot markazining “Ilmiy-texnik axborot
+markazini modernizatsiya qilish” loyihasini moliyalashtirish yuzasidan yakuniy
+qaror qabul qilingan va Innovatsion rivojlanish agentligining 2024-yil
+19-noyabrdagi 185-son buyrug‘iga asosan Ilmiy-texnik axborot markazining ushbu
+loyihasini moliyalashtirish tasdiqlangan</span>.&nbsp;</span>
+</span>
+</p>
+<p style="">
+<b>
+<span>
+<span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">Ilmiy-texnik axborot markazini modernizatsiya qilish
+loyihasining maqsadlari</span>
+</span>
+</b>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ushbu loyiha O‘zbekiston Respublikasida ilmiy-texnik
+axborot tizimini tubdan takomillashtirish, xalqaro standartlarga mos va
+zamonaviy talablarni qondiradigan yagona axborot infratuzilmasini yaratishga
+qaratilgan bo‘lib, quyidagi maqsadlarni o‘z ichiga oladi:</span>
+</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">
+<br>
+</span>
+</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">1.&nbsp;</span>
+</span>
+<b>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy-texnik axborot
+infratuzilmasini modernizatsiya qilish</span>
+</b>
+</p>
+<p style="">
+<span style="font-size: 10.0pt; font-family: &quot;Courier New&quot;;">
+<span style="font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;</span>
+</span>
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Zamonaviy kompyuter texnikasi, server uskunalari, elektron interaktiv
+panellar va boshqa innovatsion vositalar bilan jihozlash.</span>
+</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy ma’lumotlarni yig‘ish, qayta ishlash va saqlash jarayonlarini
+raqamlashtirish</span>.</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Yagona elektron ma’lumotlar bazasi va axborot platformasini yaratish
+orqali ilmiy resurslarga tezkor kirishni ta’minlash</span>.</span>
+</p>
+<p style="">
+<span>
+<span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">2</span>.<span style="font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 18pt;">
+</span>
+</span>
+</span>
+<b>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy-texnik axborot tizimini
+boshqarishni takomillashtirish</span>
+</b>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy-texnik axborot sohasida samarali boshqaruv tizimini
+shakllantirish</span>.</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Qaror qabul qilish jarayonini tezkor va ishonchli axborotlar asosida
+olib borish imkonini beruvchi analitik tizimlarni joriy etish</span>.</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Xalqaro ilmiy axborot bazalari bilan integratsiyani kengaytirish.</span>
+</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">3</span>.<span style="font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+</span>
+<b>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy salohiyat va kadrlar
+malakasini oshirish</span>
+</b>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy-texnik axborot sohasi mutaxassislarini zamonaviy ko‘nikmalar bilan
+ta’minlash</span>.</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Malaka oshirish, ilmiy-uslubiy seminarlar va treninglar o‘tkazish</span>.</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy izlanuvchilar va yosh olimlarning salohiyatini oshirish uchun
+sharoit yaratish</span>.</span>
+</p>
+<p style="">
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">4</span>.<span style="font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+<b>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy-texnik
+axborotdan foydalanishni ommalashtirish</span>
+</b>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy yutuqlar va innovatsion ishlanmalarni keng jamoatchilikka yetkazish</span>.</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy axborotlarning ochiqligini va erkin tarqalishini ta’minlash</span>.</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Jurnallar, ilmiy nashrlar va ommaviy axborot vositalarida ilmiy-texnik
+natijalarni muntazam yoritib borish</span>.</span>
+</p>
+<p style="">
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">5</span>.<span style="font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+<b>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy-texnik
+hamkorlikni kengaytirish</span>
+</b>
+</p>
+<p style="">
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Davlat
+ilmiy muassasalari, oliy ta’lim muassasalari va xususiy sektor o‘rtasidagi
+hamkorlikni kuchaytirish</span>.</p>
+<p style="">
+<span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">Xalqaro
+ilmiy tashkilotlar, axborot markazlari va ma’lumotlar bazalari bilan hamkorlik
+aloqalarini mustahkamlash</span>.</p>
+<p style="">
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy
+yutuqlarni amaliyotga joriy qilish bo‘yicha sanoat va biznes bilan hamkorlikni
+yo‘lga qo‘yish.</span>
+</p>
+<p style="">
+<span>
+<span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">6</span>.<span style="font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+</span>
+<b>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy-texnik axborotning milliy va
+xalqaro nufuzini oshirish</span>
+</b>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Markaz faoliyatini xalqaro miqyosda tanitish va global ilmiy axborot
+makonida O‘zbekistonning mavqeini mustahkamlash.</span>
+</span>
+</p>
+<p style="">
+<span style="font-size: 10.0pt; font-family: &quot;Courier New&quot;;">
+<span style="font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;</span>
+</span>
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Ilmiy-texnik axborot almashinuvida O‘zbekistonni mintaqaviy markazga
+aylantirish</span>.</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Innovatsion rivojlanishga hissa qo‘shuvchi milliy axborot siyosatini
+shakllantirish</span>.</span>
+</p>
+<p style="">
+<span>
+<br>
+</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">
+<b>Hozirga qadar loyiha doirasida quyidagi ishlar amalga oshirildi:</b>
+</span>
+</span>
+</p>
+<p style="">
+<span>&nbsp;</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Loyiha doirasida bilimlar ombori IT infratuzilmasini shakllantirish
+uchun server, ScienceID va bilimlar ombori tizimida samarali ishlash maqsadida
+yuqori unumdorlikka ega kompyuterlar, STEM tadqiqotchilari bilan podkast va
+intervyularni yozib olish hamda tadbirlarda foto va video materiallar
+tayyorlash uchun kamera, shuningdek, asosiy o‘quv xonasida real vaqt rejimida
+hamkorlik va ma’lumotlarni vizualizatsiya qilish imkonini beruvchi elektron
+interaktiv doska xarid qilindi</span>.</span>
+</p>
+<p style="">
+<span>&nbsp;</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Markaz xodimlarining salohiyatini oshirish maqsadida 18 nafar xodim “Fanur
+Group Uzbekistan”, Qozog‘iston Respublikasi Loyiha Menejerlari Uyushmasi, PMI
+Authorized Training Partner va Project Management Institute hamkorligida
+o‘qitildi</span>.</span>
+</p>
+<p style="">
+<span>&nbsp;</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Amalga oshirilgan ishlar qatorida Fransiya Respublikasiga xizmat safari
+tashkil etildi. Safar doirasida Parij shahrida joylashgan YUNESKO Bosh
+qarorgohida o‘tkazilgan “Tez o‘zgaruvchan dunyoda fan diplomatiyasi: erkaklar
+va ayollar ongida tinchlik g‘oyalarini singdirish” mavzusidagi global
+konferensiyada hamda “Global ilm-fan sohasiga mas’ul vazirlar davra suhbati”da
+ishtirok etildi. Shuningdek, xizmat safari davomida bir qator uchrashuv va
+tadbirlarda qatnashildi</span>.</span>
+</p>
+<p style="">
+<span>&nbsp;</span>
+</p>
+<p style="">
+<span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Markaz xodimlarining salohiyatini oshirish maqsadida 2025-yilda Koreya
+Respublikasi va Yaponiya davlatlariga xizmat safarlari amalga oshirildi.
+Koreyada o‘tkazilgan treninglarda 4 nafar xodim sun’iy intellekt yo‘nalishida
+bilimlarini mustahkamlab, sertifikatga ega bo‘ldi. Yaponiya safarida esa 4
+nafar xodim ilm-fan, texnologiya va innovatsiyalar sohasida ilg‘or tajriba
+hamda xalqaro ilmiy hamkorlik dasturlari bo‘yicha treninglarda ishtirok etib,
+muvaffaqiyatli yakunlangan o‘quv dasturlari asosida sertifikat oldi. Shuningdek
+Koreyaning Chengju universiteti bilan hamkorlik memorandum imzolandi</span>.</span>
+</p>
+<p style="">
+<span>&nbsp;</span>
+</p>
+<p style="">
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Markaz va AKIS hamkorligida “Fan va texnologiyalar sohasidagi muammolar
+va ularning innovatsion yechimlari” mavzusida xalqaro ilmiy-amaliy anjuman
+tashkil etildi. Tadbirda ekologiya va qishloq xo‘jaligi yo‘nalishlaridagi
+dolzarb masalalar, ularning zamonaviy yechimlari hamda xalqaro tajriba almashuvi
+muhokama qilindi. Anjumanda anlayn va oflayn 150 dan ortiq ishtirokchilar
+qatnashdi, taqdim etilgan ilmiy maqolalar nashr uchun qabul qilindi. </span>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;">Tadbir ilmiy-amaliy
+integratsiyani mustahkamlashga xizmat qildi</span>.</p>
+<p style="">
+<span>&nbsp;</span>
+</p>
+<p style="">
+<span>&nbsp;</span>
+</p>
+<p style="">
+<span>&nbsp;</span>
+</p>
+<p style="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+<p>
+<span>&nbsp;</span>
+</p> -->
+</div>
+<!--  -->
+</div>
+{% endblock %}

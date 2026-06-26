@@ -1,0 +1,16 @@
+{% load app_tags %}
+{% block contain %}
+<!-- <div class="w-full h-full bg-white  mt-4 rounded-2xl p-6">
+<h1 class="text-2xl py-3 font-bold  text-gray-900">{ title }</h1> -->
+<div class=" w-full  bg-white ">
+<!--  -->
+<div class="{{ grid_style }}">
+
+    {% for el in content %}
+    {% show_simple_post element=el post_style=style %}
+
+{% endfor %}
+</div>
+<!--  -->
+</div>
+<!-- </div> -->

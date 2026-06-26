@@ -1,0 +1,57 @@
+<script>
+const picture_links = [
+    
+   {% for el in photos %}
+   "{{ el.photo.url }}",
+    {% endfor %}
+    
+];
+const pic = document.getElementById('newspic')
+// const preview = document.getElementById('previewpic')
+let curr = 0
+
+function current_change(forward = true){
+    if(forward){
+        if (curr== picture_links.length-1 ){
+            curr= 0;
+        }
+        else{
+            curr=curr+1;  
+        }
+        
+    }
+    else{
+        if (curr== 0 ){
+            curr= picture_links.length-1;
+        }
+        else{
+            curr=curr-1;  
+        }
+    }
+    pic.setAttribute("src", picture_links[curr]);
+    // if (preview){
+    //     preview.setAttribute("src", picture_links[curr]);
+    // }
+        
+}
+
+const timer = setInterval(() => { 
+        current_change();
+        // console.log('timer '+curr)
+        }, 3000);
+
+document.getElementById(`n`)
+    .addEventListener("click", () => {
+        current_change();
+        clearInterval(timer);
+        // console.log('next'+curr)
+    });
+    document.getElementById(`p`)
+    .addEventListener("click", () => {
+        current_change(false);
+        clearInterval(timer);
+        // console.log('prev'+curr)
+    });
+
+
+</script>

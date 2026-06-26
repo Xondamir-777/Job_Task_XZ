@@ -1,0 +1,139 @@
+{% extends 'full_container.html' %}
+{% load i18n %}
+{% load static %}
+{% load app_tags %}
+{% block contain %}
+<div class="p-6 bg-white rounded-2xl mt-4">
+<h2 class="text-3xl font-bold text-blue-600 mb-4">{% trans "Jurnallar" %}</h2>
+<div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+<form method="get" class="ant-row css-cdzvx5" style="margin-left: -8px; margin-right: -8px; row-gap: 16px;">
+<div class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-lg-8 css-cdzvx5" style="padding-left: 8px; padding-right: 8px;">
+<div class="ant-picker ant-picker-range ant-picker-outlined css-cdzvx5 w-full">
+<div class="ant-picker-input">
+<input aria-invalid="false" autocomplete="off" size="12" placeholder="Boshlanish" date-range="start" value="" type="date" name="start_date">
+</div>
+<div class="ant-picker-range-separator">
+<span aria-label="to" class="ant-picker-separator">
+<span role="img" aria-label="swap-right" class="anticon anticon-swap-right">
+<svg viewBox="0 0 1024 1024" focusable="false" data-icon="swap-right" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M873.1 596.2l-164-208A32 32 0 00684 376h-64.8c-6.7 0-10.4 7.7-6.3 13l144.3 183H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h695.9c26.8 0 41.7-30.8 25.2-51.8z">
+</path>
+</svg>
+</span>
+</span>
+</div>
+<div class="ant-picker-input">
+<input aria-invalid="false" autocomplete="off" size="12" placeholder="Tugash" date-range="end" value="" type="date" name="finish_date">
+</div>
+<div class="ant-picker-active-bar" style="position: absolute; width: 0px;">
+</div>
+<!-- <span class="ant-picker-suffix"> -->
+<!-- <span role="img" aria-label="calendar" class="anticon anticon-calendar"> -->
+<svg viewBox="64 64 896 896" focusable="false" data-icon="calendar" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zM184 392V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136H184z">
+</path>
+</svg>
+</span>
+</span>
+</div>
+</div>
+<div class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-lg-8 css-cdzvx5" style="padding-left: 8px; padding-right: 8px;">
+<div class="ant-picker ant-picker-outlined css-cdzvx5 w-full">
+<div class="ant-picker-input">
+<input aria-invalid="false" autocomplete="off" size="12" placeholder="Sana tanlang" value="" type="date" name="defined_date">
+<span class="ant-picker-suffix">
+<span role="img" aria-label="calendar" class="anticon anticon-calendar">
+<svg viewBox="64 64 896 896" focusable="false" data-icon="calendar" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zM184 392V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136H184z">
+</path>
+</svg>
+</span>
+</span>
+</div>
+</div>
+</div>
+</form>
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 my-4">
+    {% for el in content %}
+<div class="bg-gray-100 p-2 rounded-lg shadow">
+<img src="{{ el.photo.url }}" alt="Muqova" class="rounded w-full h-80 object-cover mb-2">
+<a href="{{ el.upload.url }}" target="_blank" rel="noopener noreferrer" class="block text-blue-600 hover:underline text-sm">{% trans "Yuklab olish" %}</a>
+<p class="text-gray-500 text-xs mt-1">{{ el.time_creation }}</p>
+</div>
+{% endfor %}
+<!-- <div class="bg-gray-100 p-2 rounded-lg shadow">
+<img src="./CSTI8_files/Innovator_5-son_2024_.jpg" alt="Muqova" class="rounded w-full h-80 object-cover mb-2">
+<a href="http://api.csti.uz/media/article/files/Innovator_5-son_2024__1zF3icV.pdf" target="_blank" rel="noopener noreferrer" class="block text-blue-600 hover:underline text-sm">Yuklab olish</a>
+<p class="text-gray-500 text-xs mt-1">Sana: 2024-05-15</p>
+</div>
+<div class="bg-gray-100 p-2 rounded-lg shadow">
+<img src="./CSTI8_files/Innovator_4-son_2024_new.jpg" alt="Muqova" class="rounded w-full h-80 object-cover mb-2">
+<a href="http://api.csti.uz/media/article/files/Innovator_4-son_2024_new_2.pdf" target="_blank" rel="noopener noreferrer" class="block text-blue-600 hover:underline text-sm">Yuklab olish</a>
+<p class="text-gray-500 text-xs mt-1">Sana: 2024-04-24</p>
+</div>
+<div class="bg-gray-100 p-2 rounded-lg shadow">
+<img src="./CSTI8_files/Innovator_3-son_2024.jpg" alt="Muqova" class="rounded w-full h-80 object-cover mb-2">
+<a href="http://api.csti.uz/media/article/files/Innovator_3-son_2024.pdf" target="_blank" rel="noopener noreferrer" class="block text-blue-600 hover:underline text-sm">Yuklab olish</a>
+<p class="text-gray-500 text-xs mt-1">Sana: 2024-03-23</p>
+</div>
+<div class="bg-gray-100 p-2 rounded-lg shadow">
+<img src="./CSTI8_files/Innovator_2-son_2024_2.jpg" alt="Muqova" class="rounded w-full h-80 object-cover mb-2">
+<a href="http://api.csti.uz/media/article/files/Innovator_2-son_2024_2_new.pdf" target="_blank" rel="noopener noreferrer" class="block text-blue-600 hover:underline text-sm">Yuklab olish</a>
+<p class="text-gray-500 text-xs mt-1">Sana: 2024-02-22</p>
+</div>
+<div class="bg-gray-100 p-2 rounded-lg shadow">
+<img src="./CSTI8_files/Innovator_1-son_2024_new.jpg" alt="Muqova" class="rounded w-full h-80 object-cover mb-2">
+<a href="http://api.csti.uz/media/article/files/Innovator_1-son_2024_curves.pdf" target="_blank" rel="noopener noreferrer" class="block text-blue-600 hover:underline text-sm">Yuklab olish</a>
+<p class="text-gray-500 text-xs mt-1">Sana: 2024-01-21</p>
+</div> -->
+</div>
+{% paginate_tag request paginator page_obj numbers %}
+<!-- <ul class="ant-pagination css-cdzvx5">
+<li title="Previous Page" class="ant-pagination-prev ant-pagination-disabled" aria-disabled="true">
+<button class="ant-pagination-item-link" type="button" tabindex="-1" disabled="">
+<span role="img" aria-label="left" class="anticon anticon-left">
+<svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 000 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z">
+</path>
+</svg>
+</span>
+</button>
+</li>
+<li title="1" class="ant-pagination-item ant-pagination-item-1 ant-pagination-item-disabled" tabindex="0">
+<a rel="nofollow">1</a>
+</li>
+<li title="Next Page" class="ant-pagination-next ant-pagination-disabled" aria-disabled="true">
+<button class="ant-pagination-item-link" type="button" tabindex="-1" disabled="">
+<span role="img" aria-label="right" class="anticon anticon-right">
+<svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z">
+</path>
+</svg>
+</span>
+</button>
+</li>
+<li class="ant-pagination-options">
+<div class="ant-select ant-select-outlined ant-pagination-options-size-changer css-cdzvx5 ant-select-single ant-select-show-arrow ant-select-show-search" aria-label="Page Size">
+<div class="ant-select-selector">
+<span class="ant-select-selection-wrap">
+<span class="ant-select-selection-search">
+<input type="search" autocomplete="off" class="ant-select-selection-search-input" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="rc_select_2_list" aria-autocomplete="list" aria-controls="rc_select_2_list" aria-label="Page Size" value="" id="rc_select_2">
+</span>
+<span class="ant-select-selection-item" title="8 / page">8 / page</span>
+</span>
+</div>
+<span class="ant-select-arrow" unselectable="on" aria-hidden="true" style="user-select: none;">
+<span role="img" aria-label="down" class="anticon anticon-down ant-select-suffix">
+<svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
+</path>
+</svg>
+</span>
+</span>
+</div>
+</li>
+</ul> -->
+</div>
+{% endblock %}

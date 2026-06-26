@@ -1,0 +1,112 @@
+{% extends 'full_container.html' %}
+{% load i18n %}
+{% block contain %}
+<div class="grid mt-4 gap-4 grid-cols-1 lg:grid-cols-4">
+    <!--  -->
+<div class="lg:col-span-3 rounded-lg flex flex-col md:order-1 order-2 lg:order-1 gap-2">
+    {% for el in content %}
+<div class="w-full h-full flex flex-col rounded-xl shadow-sm bg-white">
+<div class="w-full p-4 sm:p-5 flex flex-col lg:flex-row gap-4 lg:gap-6">
+<img src="{{ el.photo.url }}" alt="Nazirov Sardor Jamoliddin o'g'li's photo" class="w-full sm:w-[300px] lg:w-[200px] h-auto max-h-[300px] rounded-xl object-cover border border-gray-100">
+<div class="flex flex-col justify-between gap-4 w-full">
+<div>
+<h2 class="text-xl sm:text-2xl font-semibold text-black">
+<ya-tr-span data-index="13-0" data-translated="false" data-source-lang="uz" data-target-lang="ru" data-value="Nazirov Sardor Jamoliddin o'g'li" data-translation="Назиров Сардар Джамлиддин сын" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">{{ el.name }}</ya-tr-span>
+</h2>
+<p class="text-base sm:text-[16px] text-gray-700">
+<ya-tr-span data-index="13-1" data-translated="false" data-source-lang="uz" data-target-lang="ru" data-value="Direktor" data-translation="Директор" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">{{ el.position }}</ya-tr-span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- <div class="w-full h-full flex flex-col rounded-xl shadow-sm bg-white">
+<div class="w-full p-4 sm:p-5 flex flex-col lg:flex-row gap-4 lg:gap-6">
+<img src="" alt="Davrukov Faxriddin Umarovich's photo" class="w-full sm:w-[300px] lg:w-[200px] h-auto max-h-[300px] rounded-xl object-cover border border-gray-100">
+<div class="flex flex-col justify-between gap-4 w-full">
+<div>
+<h2 class="text-xl sm:text-2xl font-semibold text-black">
+<ya-tr-span data-index="14-0" data-translated="false" data-source-lang="uz" data-target-lang="ru" data-value="Davrukov Faxriddin Umarovich" data-translation="Давруков Фахриддин Умарович" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Davrukov Faxriddin Umarovich</ya-tr-span>
+</h2>
+<p class="text-base sm:text-[16px] text-gray-700">
+<ya-tr-span data-index="14-1" data-translated="false" data-source-lang="uz" data-target-lang="ru" data-value="Direktor birinchi o'rinbosari" data-translation="Первый заместитель директора" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Direktor birinchi o'rinbosari</ya-tr-span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full h-full flex flex-col rounded-xl shadow-sm bg-white">
+<div class="w-full p-4 sm:p-5 flex flex-col lg:flex-row gap-4 lg:gap-6">
+<img src="http://api.csti.uz/media/employees/Farrukh_Aminov_1_3CIctz3.jpg" alt="Aminov Farrux Farxadovich's photo" class="w-full sm:w-[300px] lg:w-[200px] h-auto max-h-[300px] rounded-xl object-cover border border-gray-100">
+<div class="flex flex-col justify-between gap-4 w-full">
+<div>
+<h2 class="text-xl sm:text-2xl font-semibold text-black">
+<ya-tr-span data-index="15-0" data-translated="false" data-source-lang="uz" data-target-lang="ru" data-value="Aminov Farrux Farxadovich" data-translation="Аминов Фаррух Фархадович" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Aminov Farrux Farxadovich</ya-tr-span>
+</h2>
+<p class="text-base sm:text-[16px] text-gray-700">
+<ya-tr-span data-index="15-1" data-translated="false" data-source-lang="uz" data-target-lang="ru" data-value="Direktorning raqamlashtirish va axborotlarni tahlil qilish bo‘yicha o‘rinbosari" data-translation="Заместитель директора по цифровизации и анализу информации" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Direktorning raqamlashtirish va axborotlarni tahlil qilish bo‘yicha o‘rinbosari</ya-tr-span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full h-full flex flex-col rounded-xl shadow-sm bg-white">
+<div class="w-full p-4 sm:p-5 flex flex-col lg:flex-row gap-4 lg:gap-6">
+<img src="http://api.csti.uz/media/employees/PRO_9752_UCdNAsk.JPG" alt="Mirzayev Chingiz Gulom o‘g‘li's photo" class="w-full sm:w-[300px] lg:w-[200px] h-auto max-h-[300px] rounded-xl object-cover border border-gray-100">
+<div class="flex flex-col justify-between gap-4 w-full">
+<div>
+<h2 class="text-xl sm:text-2xl font-semibold text-black">Mirzayev Chingiz Gulom o‘g‘li</h2>
+<p class="text-base sm:text-[16px] text-gray-700">Direktorning statistika va patent tadqiqotlari bo‘yicha o‘rinbosari</p>
+</div>
+</div>
+</div>
+</div> -->
+{% endfor %}
+</div>
+
+<!--  -->
+<div class="col-span-1 w-full rounded-xl text-white max-h-[300px] md:order-2 order-1 lg:order-2">
+<div class="py-4 rounded-xl bg-white" style="max-height: 300px;">
+<h2 class="text-2xl font-medium px-4 text-black">
+<ya-tr-span data-index="16-0" data-translated="false" data-source-lang="uz" data-target-lang="ru" data-value="Tuzilma" data-translation="Структура" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Tuzilma</ya-tr-span>
+</h2>
+<div class="block lg:hidden px-4 mt-2">
+<div class="ant-select ant-select-outlined w-full p-2 border border-gray-300 rounded-md text-black css-cdzvx5 ant-select-single ant-select-show-arrow">
+<div class="ant-select-selector">
+<span class="ant-select-selection-wrap">
+<span class="ant-select-selection-search">
+<input type="search" autocomplete="off" class="ant-select-selection-search-input" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="rc_select_0_list" aria-autocomplete="list" aria-controls="rc_select_0_list" readonly="" unselectable="on" value="" id="rc_select_0" style="opacity: 0;">
+</span>
+<span class="ant-select-selection-item" title="{% trans "Rahbariyat" %}">{% trans "Rahbariyat" %}</span>
+</span>
+</div>
+<span class="ant-select-arrow" unselectable="on" aria-hidden="true" style="user-select: none;">
+<span role="img" aria-label="down" class="anticon anticon-down ant-select-suffix">
+<svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
+</path>
+</svg>
+</span>
+</span>
+</div>
+</div>
+<!--  -->
+<div class="hidden lg:flex flex-col px-4 font-medium gap-2 mt-2 select-none h-[300px]" style="height: 300px;">
+    {% for key, val in right_side_list %}
+<!-- <p class="cursor-pointer px-4 py-1.5 !text-[17px] transition-all text-lg rounded-md m-0 text-black bg-[#E6F4FF] !text-[#1677FF]" style="margin: 0px;">Rahbariyat</p> -->
+<a href="{% url 'leaders_pos' key %}"><p class="cursor-pointer px-4 py-1.5 !text-[17px] transition-all text-lg rounded-md m-0 text-black hover:bg-gray-100" style="margin: 0px;">
+<ya-tr-span data-index="17-0" data-translated="false" data-source-lang="uz" data-target-lang="ru"  data-ch="0" data-type="trSpan" style="visibility: inherit !important;">{{ val }}</ya-tr-span>
+<!-- data-value="Direktor Maslahatchisi" data-translation="Советник Директора" -->
+</p></a>
+<!-- <p class="cursor-pointer px-4 py-1.5 !text-[17px] transition-all text-lg rounded-md m-0 text-black hover:bg-gray-100" style="margin: 0px;">
+<ya-tr-span data-index="18-0" data-translated="false" data-source-lang="uz" data-target-lang="ru" data-value="Boshqarmalar" data-translation="Отделы" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Boshqarmalar</ya-tr-span>
+</p>
+<p class="cursor-pointer px-4 py-1.5 !text-[17px] transition-all text-lg rounded-md m-0 text-black hover:bg-gray-100" style="margin: 0px;">
+<ya-tr-span data-index="19-0" data-translated="false" data-source-lang="uz" data-target-lang="ru" data-value="Bo'limlar" data-translation="Разделы" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Bo'limlar</ya-tr-span>
+</p> -->
+{% endfor %}
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

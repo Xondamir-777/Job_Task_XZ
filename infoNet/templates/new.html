@@ -1,0 +1,187 @@
+{% extends 'full_container.html' %}
+{% load i18n %}
+{% load app_tags %}
+{% block contain %}
+<div class="p-6 bg-white rounded-2xl mt-4">
+<div class="flex flex-col md:flex-row gap-8 ">
+<div class="md:w-2/3">
+<div class="relative w-full rounded-xl overflow-hidden group">
+<div class="relative w-full h-[300px] md:h-[500px] overflow-hidden">
+<div class="absolute inset-0 transition-opacity duration-500 opacity-100">
+<div class="ant-image css-cdzvx5">
+<img  id="newspic" alt="News image 1" class="ant-image-img w-full h-full object-cover css-cdzvx5" src="{{ content.photos.all.0.photo.url }}">
+<div class="ant-image-mask">
+<div class="ant-image-mask-info">
+<span role="img" aria-label="eye" class="anticon anticon-eye">
+<svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z">
+</path>
+</svg>
+</span>Preview</div>
+</div>
+</div>
+</div>
+<!-- <div class="absolute inset-0 transition-opacity duration-500 opacity-0">
+<div class="ant-image css-cdzvx5">
+<img alt="News image 2" class="ant-image-img w-full h-full object-cover css-cdzvx5" src="./CSTI3_files/photo_2026-05-07_09-59-15.jpg">
+<div class="ant-image-mask">
+<div class="ant-image-mask-info">
+<span role="img" aria-label="eye" class="anticon anticon-eye">
+<svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z">
+</path>
+</svg>
+</span>Preview</div>
+</div>
+</div>
+</div>
+<div class="absolute inset-0 transition-opacity duration-500 opacity-0">
+<div class="ant-image css-cdzvx5">
+<img alt="News image 3" class="ant-image-img w-full h-full object-cover css-cdzvx5" src="./CSTI3_files/photo_2026-05-07_09-59-15.jpg">
+<div class="ant-image-mask">
+<div class="ant-image-mask-info">
+<span role="img" aria-label="eye" class="anticon anticon-eye">
+<svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z">
+</path>
+</svg>
+</span>Preview</div>
+</div>
+</div>
+</div>
+<div class="absolute inset-0 transition-opacity duration-500 opacity-0">
+<div class="ant-image css-cdzvx5">
+<img alt="News image 4" class="ant-image-img w-full h-full object-cover css-cdzvx5" src="./CSTI3_files/photo_2026-05-07_09-59-15.jpg">
+<div class="ant-image-mask">
+<div class="ant-image-mask-info">
+<span role="img" aria-label="eye" class="anticon anticon-eye">
+<svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z">
+</path>
+</svg>
+</span>Preview</div>
+</div>
+</div>
+</div> -->
+</div>
+<button id="p"  class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 z-10" aria-label="Previous image">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left" aria-hidden="true">
+<path d="m15 18-6-6 6-6">
+</path>
+</svg>
+</button>
+<button id="n" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 z-10" aria-label="Next image">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right" aria-hidden="true">
+<path d="m9 18 6-6-6-6">
+</path>
+</svg>
+</button>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+<button class="w-2 h-2 rounded-full transition-all duration-300 bg-white w-6" aria-label="Go to image 1">
+</button>
+<button class="w-2 h-2 rounded-full transition-all duration-300 bg-white/50 hover:bg-white/75" aria-label="Go to image 2">
+</button>
+<button class="w-2 h-2 rounded-full transition-all duration-300 bg-white/50 hover:bg-white/75" aria-label="Go to image 3">
+</button>
+<button class="w-2 h-2 rounded-full transition-all duration-300 bg-white/50 hover:bg-white/75" aria-label="Go to image 4">
+</button>
+</div>
+</div>
+
+{% change_photo photo=content.photos.all %}
+<div class="mt-4">
+<h1 class="text-2xl font-bold mb-2">{{ content.title }}</h1>
+<span class="text-gray-500 text-lg">{{ content.time_creation|date:"d.m.Y" }}</span>
+<p class="mt-4 text-[16px] leading-7">
+    {{ content.content|safe }}
+<!-- <p>
+</p>
+<div>
+</div>
+<p>
+</p>&lt;section class="text-token-text-primary w-full focus:outline-none [--shadow-height:45px] has-data-writing-block:pointer-events-none has-data-writing-block:-mt-(--shadow-height) has-data-writing-block:pt-(--shadow-height) [&amp;:has([data-writing-block])&gt;*]:pointer-events-auto [content-visibility:auto] supports-[content-visibility:auto]:[contain-intrinsic-size:auto_100lvh] R6Vx5W_threadScrollVars scroll-mb-[calc(var(--scroll-root-safe-area-inset-bottom,0px)+var(--thread-response-height))] scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]" dir="auto" data-turn-id="request-WEB:568fc022-f38b-45f2-a6ce-ea8ed01c5fdf-16" data-testid="conversation-turn-14" data-scroll-anchor="false" data-turn="assistant"&gt;<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<p>AQShning Illinois shtatida joylashgan <span>
+<span>Argonne National Laboratory</span>
+</span> (ANL) faoliyati bilan yaqindan tanishildi hamda laboratoriya mutaxassislari bilan uchrashuvlar o‘tkazildi.</p>
+<p>Uchrashuvlar davomida Bruce Hamilton va Ji-Hyun Kim bilan ilmiy hamkorlik istiqbollari, zamonaviy ilmiy infratuzilmalar va innovatsion texnologiyalar yo‘nalishlari yuzasidan fikr almashildi.</p>
+<p>Shuningdek, Advanced Photon Source ilmiy majmuasi hamda Aurora superkompyuter tizimi faoliyati bilan yaqindan tanishilib, yuqori unumdor hisoblash tizimlari, ilg‘or ilmiy ishlanmalar va yirik tadqiqot infratuzilmalarining imkoniyatlari o‘rganildi.</p>
+<p>Muloqotlar davomida GENESIS platformasi, AI Model Consortium va American Science Cloud tashabbuslari, shuningdek, sun’iy intellekt asosida ilmiy boshqaruv va innovatsion siyosatni rivojlantirish masalalari muhokama qilindi.</p>
+<p>Uchrashuv yakunida tomonlar ilmiy hamkorlikni rivojlantirish va istiqbolli yo‘nalishlarda o‘zaro aloqalarni davom ettirish yuzasidan fikr almashdilar.</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+</div>
+<div>
+<div>
+</div>
+</div>
+</div>
+ 
+</div>&lt;/section&gt; -->
+</p>
+<div class="mt-2 text-blue-600 text-sm">
+</div>
+</div>
+</div>
+<div class="md:w-1/3 bg-gray-100 p-4 rounded-xl">
+<h2 class="text-lg font-semibold mb-4">{% trans "Boshqa yangiliklar" %}</h2>
+{% for el in right_side %}
+<a id="news-{{ forloop.counter0 }}" class="block bg-white rounded-lg p-3 mb-4 shadow-sm hover:shadow-md transition" href="{% url 'new' el.pk %}" style="display: None;">
+<img src="{{ el.photos.all.first.photo.url }}" alt="Related News" class="rounded-lg w-full h-[140px] object-cover mb-2">
+<h3 class="font-medium text-[15px] mb-1 line-clamp-3">{{el.title}}</h3>
+<p class="text-sm text-gray-500 line-clamp-2">
+</p>
+<span class="text-[12px] text-gray-400 mt-1 inline-block">{{ el.time_creation }}</span>
+</a>
+{% endfor %}
+<div id="others"></div>
+<!-- <a class="block bg-white rounded-lg p-3 mb-4 shadow-sm hover:shadow-md transition" href="https://csti.uz/new/news/87">
+<img src="./CSTI3_files/photo_2026-05-08_14-50-51.jpg" alt="Related News" class="rounded-lg w-full h-[140px] object-cover mb-2">
+<h3 class="font-medium text-[15px] mb-1 line-clamp-3">The Ohio State Universityda ilmiy hamkorlik va axborot tizimlari masalalari muhokama qilindi</h3>
+<p class="text-sm text-gray-500 line-clamp-2">
+</p>
+<span class="text-[12px] text-gray-400 mt-1 inline-block">2026-05-07</span>
+</a>
+<a class="block bg-white rounded-lg p-3 mb-4 shadow-sm hover:shadow-md transition" href="https://csti.uz/new/news/85">
+<img src="./CSTI3_files/photo_2026-05-06_18-20-54.jpg" alt="Related News" class="rounded-lg w-full h-[140px] object-cover mb-2">
+<h3 class="font-medium text-[15px] mb-1 line-clamp-3">Xalqaro aloqalar kengaymoqda. AQShning Chicago Council on Science and Technology tashkiloti ijrochi direktori Alexandra Prokuda bilan uchrashuv o‘tkazildi.</h3>
+<p class="text-sm text-gray-500 line-clamp-2">
+</p>
+<span class="text-[12px] text-gray-400 mt-1 inline-block">2026-05-05</span>
+</a>
+<a class="block bg-white rounded-lg p-3 mb-4 shadow-sm hover:shadow-md transition" href="https://csti.uz/new/news/84">
+<img src="./CSTI3_files/photo_2026-05-06_18-16-45.jpg" alt="Related News" class="rounded-lg w-full h-[140px] object-cover mb-2">
+<h3 class="font-medium text-[15px] mb-1 line-clamp-3">Xalqaro hamkorlik AQShdagi yetakchi universitetlar bilan uchrashuvlar o‘tkazildi.</h3>
+<p class="text-sm text-gray-500 line-clamp-2">
+</p>
+<span class="text-[12px] text-gray-400 mt-1 inline-block">2026-05-04</span>
+</a> -->
+<button id="more_info" type="button" class="ant-btn css-cdzvx5 ant-btn-primary ant-btn-color-primary ant-btn-variant-solid w-full mt-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+<span>{% trans "Ko‘proq yangiliklar" %}</span>
+</button>
+</div>
+<script>
+    let i=0;
+
+    function show_side_news(){
+        for(let j=i; j<i+3; j++){
+            document.getElementById(`news-${j}`).setAttribute('style', '')
+        }
+        // document.getElementById(`news-`);
+        i=i+3;
+    }
+    show_side_news();
+    document.getElementById('more_info').addEventListener('click', ()=>{
+        show_side_news();
+    })
+</script>
+</div>
+</div>
+{% endblock %}

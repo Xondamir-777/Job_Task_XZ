@@ -1,0 +1,9 @@
+{% if el.url.exist %}
+    {% if el.url.val %}
+     <a {{ arg }} href="{% url el.url.src el.url.val %}">{{ text }}</a>
+     {% else %}
+     <a {{ arg }} href="{% url el.url.src %}">{{ text }}</a>
+     {% endif %}
+     {% else %}
+     {{ text }}
+     {% endif %}

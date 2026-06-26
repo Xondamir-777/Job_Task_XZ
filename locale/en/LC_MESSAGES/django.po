@@ -1,0 +1,255 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-25 13:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: csti/settings.py:113
+msgid "Uzbek"
+msgstr ""
+
+#: csti/settings.py:114
+msgid "Russian"
+msgstr ""
+
+#: csti/settings.py:115
+msgid "English"
+msgstr ""
+
+#: infoNet/Menu_dict.py:22 infoNet/Menu_dict.py:54 infoNet/views.py:26
+#: infoNet/views.py:58
+msgid "Nashrlar"
+msgstr "Publications"
+
+#: infoNet/Menu_dict.py:26 infoNet/views.py:30
+msgid "Jurnal soni"
+msgstr "Article List"
+
+#: infoNet/Menu_dict.py:27 infoNet/views.py:31
+msgid "Tahririyat Kengashi"
+msgstr "Editorial board"
+
+#: infoNet/Menu_dict.py:28 infoNet/views.py:32
+msgid "Umumiy ma'lumotlar"
+msgstr "Open Data"
+
+#: infoNet/Menu_dict.py:32 infoNet/views.py:36
+msgid "So'ngi yangiliklar"
+msgstr "Latest News"
+
+#: infoNet/Menu_dict.py:39 infoNet/views.py:43
+msgid "Markaz"
+msgstr "Center"
+
+#: infoNet/Menu_dict.py:40 infoNet/views.py:44
+msgid "Markaz haqida"
+msgstr "About Center"
+
+#: infoNet/Menu_dict.py:41 infoNet/views.py:45
+msgid "Me’yoriy hujjatlar"
+msgstr "Regulatory documents"
+
+#: infoNet/Menu_dict.py:42 infoNet/models.py:75
+#: infoNet/templates/Leaders.html:80 infoNet/views.py:46
+msgid "Rahbariyat"
+msgstr "Leadership"
+
+#: infoNet/Menu_dict.py:43 infoNet/views.py:47
+msgid "Bo‘sh ish o‘rinlari"
+msgstr "Vacancies"
+
+#: infoNet/Menu_dict.py:46 infoNet/views.py:50
+msgid "Resurslar"
+msgstr "Resources"
+
+#: infoNet/Menu_dict.py:47 infoNet/models.py:155 infoNet/views.py:51
+msgid "Axborot tizimlari"
+msgstr "Information System"
+
+#: infoNet/Menu_dict.py:48 infoNet/templates/base.html:451
+#: infoNet/templates/magazines.html:7 infoNet/views.py:52
+msgid "Jurnallar"
+msgstr "Journals"
+
+#: infoNet/Menu_dict.py:49 infoNet/models.py:160 infoNet/views.py:53
+msgid "Ma'lumotlarni tahlil qilish"
+msgstr "Data Analysis"
+
+#: infoNet/Menu_dict.py:52 infoNet/views.py:56
+msgid "Loyihalar"
+msgstr "Projects"
+
+#: infoNet/Menu_dict.py:56 infoNet/views.py:60
+msgid "Hamkorlik"
+msgstr "Partnership"
+
+#: infoNet/Menu_dict.py:57 infoNet/views.py:61
+msgid "Hamkorlar"
+msgstr "Partners"
+
+#: infoNet/Menu_dict.py:60 infoNet/templates/base.html:449
+#: infoNet/templates/index.html:43 infoNet/views.py:64
+msgid "Yangiliklar"
+msgstr "News"
+
+#: infoNet/Menu_dict.py:62 infoNet/Menu_dict.py:63 infoNet/views.py:66
+#: infoNet/views.py:67
+msgid "Ochiq ma'lumotlar"
+msgstr "Open Data"
+
+#: infoNet/Menu_dict.py:66 infoNet/Menu_dict.py:67 infoNet/views.py:70
+#: infoNet/views.py:71
+msgid "Biz bilan bog‘lanish"
+msgstr "Contact Us"
+
+#: infoNet/models.py:25
+msgid "Videolar"
+msgstr "Videos"
+
+#: infoNet/models.py:30
+msgid "Dayjestlar"
+msgstr "Digests"
+
+#: infoNet/models.py:34
+msgid "Podkastlar"
+msgstr "Podcasts"
+
+#: infoNet/models.py:38
+msgid "InnoTime"
+msgstr "InnoTime"
+
+#: infoNet/models.py:42
+msgid "Intervyular"
+msgstr "Interviews"
+
+#: infoNet/models.py:80
+msgid "Direktor Maslahatchisi"
+msgstr "Director's Advisor"
+
+#: infoNet/models.py:84
+msgid "Boshqarmalar"
+msgstr "Directorates"
+
+#: infoNet/models.py:88
+msgid "Bo'limlar"
+msgstr "Departments"
+
+#: infoNet/templates/Contact.html:6
+msgid "Biz bilan bog'laning"
+msgstr "Contact Us"
+
+#: infoNet/templates/Contact.html:20
+msgid "Xabar yuboring"
+msgstr "Send a Message"
+
+#: infoNet/templates/Contact.html:26
+msgid "Ismingiz"
+msgstr "Your Name"
+
+#: infoNet/templates/Contact.html:31
+msgid "F.I.Sh"
+msgstr "Full Name"
+
+#: infoNet/templates/Contact.html:40
+msgid "Email manzilingiz"
+msgstr "Your Email Address"
+
+#: infoNet/templates/Contact.html:70
+msgid "Xabaringiz"
+msgstr "Your message"
+
+#: infoNet/templates/Contact.html:75
+msgid "Xabaringizni shu yerga yozing..."
+msgstr "Write your message here..."
+
+#: infoNet/templates/Contact.html:85
+msgid "Nimadir xato ketdi! "
+msgstr "Something went wrong"
+
+#: infoNet/templates/Contact.html:96
+msgid "Xabar yuborish"
+msgstr "Send"
+
+#: infoNet/templates/base.html:126 infoNet/templates/index.html:20
+msgid "Ilmiy-texnik axborot markazi"
+msgstr "Center for Scientific and Technical Information"
+
+#: infoNet/templates/base.html:425
+msgid "Bizning manzil"
+msgstr "Our Address"
+
+#: infoNet/templates/base.html:434
+msgid "Foydali manbalar"
+msgstr "High-ranking organizations"
+
+#: infoNet/templates/base.html:438
+msgid "O'zbekiston Respublikasi Hukumat portali"
+msgstr "Government Portal of the Republic of Uzbekistan"
+
+#: infoNet/templates/base.html:442
+msgid "Innovatsion rivojlanish agentligi"
+msgstr "Agency for Innovative Development"
+
+#: infoNet/templates/base.html:447
+msgid "Biz bilan bog'lanish"
+msgstr "Contact Us"
+
+#: infoNet/templates/base.html:450
+msgid "Bizning hamkorlar"
+msgstr "Our Partners"
+
+#: infoNet/templates/base.html:487
+msgid "Ijtimoiy tarmoqlar"
+msgstr "Social Maedia"
+
+#: infoNet/templates/index.html:21
+msgid ""
+"Bilim, fan va texnologiyaga tayanmagan millatning kelajagi bo‘lmaydi – "
+"bizning yo‘limiz faqat ilm va innovatsiya bilan rivojlanishdir."
+msgstr ""
+"A nation that does not rely on knowledge, science, and technology will have "
+"no future - our path is to develop only through science and innovation."
+
+#: infoNet/templates/index.html:117
+msgid "Barchasini ko'rish"
+msgstr "See all"
+
+#: infoNet/templates/magazines.html:62 infoNet/templates/tags/post.html:48
+msgid "Yuklab olish"
+msgstr "Download"
+
+#: infoNet/templates/new.html:134
+msgid "Boshqa yangiliklar"
+msgstr "News"
+
+#: infoNet/templates/new.html:167
+msgid "Ko‘proq yangiliklar"
+msgstr "More News"
+
+#: infoNet/templates/tags/post.html:103 infoNet/templates/tags/post.html:117
+msgid "Ko‘proq..."
+msgstr "More..."
+
+#: infoNet/templates/tags/post.html:112
+msgid "Kamroq..."
+msgstr "Less.."
+
+#: infoNet/views.py:113
+#, fuzzy
+#| msgid "So'ngi yangiliklar"
+msgid "So‘nggi yangiliklar"
+msgstr "Latest News"

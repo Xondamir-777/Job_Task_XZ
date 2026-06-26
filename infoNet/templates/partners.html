@@ -1,0 +1,141 @@
+{% extends 'full_container.html' %}
+{% load i18n %}
+{% load static %}
+{% block contain %}
+
+<!-- <aside class="ant-layout-sider ant-layout-sider-dark !site-layout-background !bg-white !pt-10 !custom-scrollbar overflow-y-auto transition-all duration-300 translate-x-0 fixed md:static css-cdzvx5" style="height: 100vh; position: sticky; top: 0px; z-index: 10; flex: 0 0 269px; max-width: 269px; min-width: 269px; width: 269px;">
+<div class="ant-layout-sider-children">
+<button class="md:hidden bg-gray-200 p-1 rounded-md z-40 absolute top-4 right-4">
+<span role="img" aria-label="close" class="anticon anticon-close">
+<svg fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+<path d="M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z">
+</path>
+</svg>
+</span>
+</button>
+<ul class="ant-menu ant-menu-root ant-menu-inline ant-menu-light !text-[16px] css-cdzvx5" role="menu" tabindex="0" data-menu-list="true">
+<li class="ant-menu-submenu ant-menu-submenu-inline ant-menu-submenu-open ant-menu-submenu-selected" role="none">
+<div role="menuitem" class="ant-menu-submenu-title" tabindex="-1" aria-expanded="true" aria-haspopup="true" data-menu-id="rc-menu-uuid-68580-4-engagement" aria-controls="rc-menu-uuid-68580-4-engagement-popup" style="padding-left: 24px;">
+<span class="ant-menu-title-content">Hamkorlik</span>
+<i class="ant-menu-submenu-arrow">
+</i>
+</div>
+<ul class="ant-menu ant-menu-sub ant-menu-inline" role="menu" data-menu-list="true" id="rc-menu-uuid-68580-4-engagement-popup" style="">
+<li role="menuitem" tabindex="-1" class="ant-menu-item ant-menu-item-selected ant-menu-item-only-child" data-menu-id="rc-menu-uuid-68580-4-/engagement/collaborations" style="padding-left: 48px;">
+<span class="ant-menu-title-content">Hamkorlar</span>
+</li>
+</ul>
+</li>
+</ul>
+<div aria-hidden="true" style="display: none;">
+</div>
+<div class="absolute z-30   bottom-[5%] md:right-6 space-y-2">
+</div>
+</div>
+</aside> -->
+<div class="ant-layout max-[767px]:ml-[-270px]  css-cdzvx5" style="padding: 0px 14px 14px;">
+    <!--  -->
+<main class="ant-layout-content css-cdzvx5" style="padding: 2px; margin: 0px; min-height: 280px; position: relative;">
+<section class="p-6 bg-white text-gray-800 rounded-2xl mt-4">
+<h2 class="text-3xl font-bold text-blue-700 mb-6">{{ title }}</h2>
+<!--  -->
+<div class="space-y-4">
+    {% for p in content %}
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-200 p-6 items-start rounded-xl   hover:border-blue-300 transition-all duration-300 cursor-pointer bg-gradient-to-r from-white to-gray-50">
+<div class="md:col-span-2 space-y-3">
+<h3 class="text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">{{ p.title }}</h3>
+</div>
+<div class="flex justify-center items-start md:items-center">
+<img src="{{ p.photo }}" alt="{{ p.title }}" class="w-full max-w-xs rounded-lg shadow-md object-cover h-48">
+<!-- {% static p.photo %} -->
+</div>
+</div>
+{% endfor %}
+<!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-200 p-6 items-start rounded-xl   hover:border-blue-300 transition-all duration-300 cursor-pointer bg-gradient-to-r from-white to-gray-50">
+<div class="md:col-span-2 space-y-3">
+<h3 class="text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">Ilmiy-texnik axborot markazi va Rossiyaning “Nauchnaya elektronnaya biblioteka” (eLIBRARY.RU) mas’uliyati cheklangan jamiyati o‘rtasida hamkorlik memorandumi imzolandi</h3>
+</div>
+<div class="flex justify-center items-start md:items-center">
+<img src="./CSTI5_files/12112.jpg" alt="Ilmiy-texnik axborot markazi va Rossiyaning “Nauchnaya elektronnaya biblioteka” (eLIBRARY.RU) mas’uliyati cheklangan jamiyati o‘rtasida hamkorlik memorandumi imzolandi" class="w-full max-w-xs rounded-lg shadow-md object-cover h-48">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-200 p-6 items-start rounded-xl   hover:border-blue-300 transition-all duration-300 cursor-pointer bg-gradient-to-r from-white to-gray-50">
+<div class="md:col-span-2 space-y-3">
+<h3 class="text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">Innovatsion rivojlanish agentligi huzuridagi Ilmiy-texnik axborot markazi va Toshkent irrigatsiya va qishloq xo‘jaligini mexanizatsiyalash muhandislari instituti Milliy tadqiqot universiteti o‘rtasidagi hamkorlik to‘g‘risida</h3>
+</div>
+<div class="flex justify-center items-start md:items-center">
+<img src="./CSTI5_files/1221.jpg" alt="Innovatsion rivojlanish agentligi huzuridagi Ilmiy-texnik axborot markazi va Toshkent irrigatsiya va qishloq xo‘jaligini mexanizatsiyalash muhandislari instituti Milliy tadqiqot universiteti o‘rtasidagi hamkorlik to‘g‘risida" class="w-full max-w-xs rounded-lg shadow-md object-cover h-48">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-200 p-6 items-start rounded-xl   hover:border-blue-300 transition-all duration-300 cursor-pointer bg-gradient-to-r from-white to-gray-50">
+<div class="md:col-span-2 space-y-3">
+<h3 class="text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">Qishloq xo'jaligida bilim va innovatsiyalar Milliy markazi bilan Innovatsion rivojlanish agentligi huzuridagi Ilmiy-texnik axborot markazi o'rtasidagi hamkorlik to'g'risida</h3>
+</div>
+<div class="flex justify-center items-start md:items-center">
+<img src="./CSTI5_files/121_isJ3x1V.jpg" alt="Qishloq xo&#39;jaligida bilim va innovatsiyalar Milliy markazi bilan Innovatsion rivojlanish agentligi huzuridagi Ilmiy-texnik axborot markazi o&#39;rtasidagi hamkorlik to&#39;g&#39;risida" class="w-full max-w-xs rounded-lg shadow-md object-cover h-48">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-200 p-6 items-start rounded-xl   hover:border-blue-300 transition-all duration-300 cursor-pointer bg-gradient-to-r from-white to-gray-50">
+<div class="md:col-span-2 space-y-3">
+<h3 class="text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">Hamkorlik memorandumi Toshkent shahridagi Turin politexnika universiteti vа O‘zbekiston Respublikasi Innovatsion rivojlanish vazirligi huzuridagi Ilmiy-texnik axborot markazi o‘rtasida</h3>
+</div>
+<div class="flex justify-center items-start md:items-center">
+<img src="./CSTI5_files/photo_2022-03-18_19-40-17.jpg" alt="Hamkorlik memorandumi Toshkent shahridagi Turin politexnika universiteti vа O‘zbekiston Respublikasi Innovatsion rivojlanish vazirligi huzuridagi Ilmiy-texnik axborot markazi o‘rtasida" class="w-full max-w-xs rounded-lg shadow-md object-cover h-48">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-200 p-6 items-start rounded-xl   hover:border-blue-300 transition-all duration-300 cursor-pointer bg-gradient-to-r from-white to-gray-50">
+<div class="md:col-span-2 space-y-3">
+<h3 class="text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">Hamkorlik to‘g‘risidagi memorandum ilmiy-texnik axborot sohasida Ozarbayjon Markaziy ilmiy kutubxonasi va O‘zbekiston Respublikasi Innovatsion rivojlanish vazirligi huzuridagi Ilmiy-texnik axborot markazi o‘rtasida</h3>
+</div>
+<div class="flex justify-center items-start md:items-center">
+<img src="./CSTI5_files/1639_1663400143.jpg" alt="Hamkorlik to‘g‘risidagi memorandum ilmiy-texnik axborot sohasida Ozarbayjon Markaziy ilmiy kutubxonasi va O‘zbekiston Respublikasi Innovatsion rivojlanish vazirligi huzuridagi Ilmiy-texnik axborot markazi o‘rtasida" class="w-full max-w-xs rounded-lg shadow-md object-cover h-48">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-200 p-6 items-start rounded-xl   hover:border-blue-300 transition-all duration-300 cursor-pointer bg-gradient-to-r from-white to-gray-50">
+<div class="md:col-span-2 space-y-3">
+<h3 class="text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">Hamkorlik to‘g‘risidagi memorandum O‘zbekiston Respublikasi Innovatsion rivojlanish vazirligi huzuridagi Ilmiy-texnik axborot markazi va Rossiya Federatsiyasi Birinchi Prezidenti B.N. Yeltsin nomidagi Ural federal universiteti o‘rtasida</h3>
+</div>
+<div class="flex justify-center items-start md:items-center">
+<img src="./CSTI5_files/csm_20211214_uzbekistan_0ba0fbe1d0.jpg" alt="Hamkorlik to‘g‘risidagi memorandum O‘zbekiston Respublikasi Innovatsion rivojlanish vazirligi huzuridagi Ilmiy-texnik axborot markazi va Rossiya Federatsiyasi Birinchi Prezidenti B.N. Yeltsin nomidagi Ural federal universiteti o‘rtasida" class="w-full max-w-xs rounded-lg shadow-md object-cover h-48">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-200 p-6 items-start rounded-xl   hover:border-blue-300 transition-all duration-300 cursor-pointer bg-gradient-to-r from-white to-gray-50">
+<div class="md:col-span-2 space-y-3">
+<h3 class="text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">Bu memorandum Oʻzbekiston Respublikasi Innovatsion rivojlanish vazirligi huzuridagi ilmiy-texnik axborot markazi hamda Rossiya Fanlar akademiyasi qoshidagi Butunrossiya ilmiy va texnik axborot instituti (ВИНИТИ РАН) o'rtasidagi hamkorlik niyatlarini belgilaydi.</h3>
+</div>
+<div class="flex justify-center items-start md:items-center">
+<img src="./CSTI5_files/22.jpg" alt="Bu memorandum Oʻzbekiston Respublikasi Innovatsion rivojlanish vazirligi huzuridagi ilmiy-texnik axborot markazi hamda Rossiya Fanlar akademiyasi qoshidagi Butunrossiya ilmiy va texnik axborot instituti (ВИНИТИ РАН) o&#39;rtasidagi hamkorlik niyatlarini belgilaydi." class="w-full max-w-xs rounded-lg shadow-md object-cover h-48">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-200 p-6 items-start rounded-xl   hover:border-blue-300 transition-all duration-300 cursor-pointer bg-gradient-to-r from-white to-gray-50">
+<div class="md:col-span-2 space-y-3">
+<h3 class="text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">FAN, TEXNOLOGIYALAR VA INNOVATSIYALAR SOHASIDA HAMKORLIK TO‘G‘RISIDA MEMORANDUM Belarus Respublikasining «Ilmiy-texnik sohani tizimli tahlil qilish va axborot bilan ta’minlash instituti» davlat muassasasi va O‘zbekiston Respublikasi Innovatsion rivojlanish vazirligi huzuridagi Ilmiy-texnik axborot markazi o‘rtasida</h3>
+</div>
+<div class="flex justify-center items-start md:items-center">
+<img src="./CSTI5_files/11.jpg" alt="FAN, TEXNOLOGIYALAR VA INNOVATSIYALAR SOHASIDA HAMKORLIK TO‘G‘RISIDA MEMORANDUM Belarus Respublikasining «Ilmiy-texnik sohani tizimli tahlil qilish va axborot bilan ta’minlash instituti» davlat muassasasi va O‘zbekiston Respublikasi Innovatsion rivojlanish vazirligi huzuridagi Ilmiy-texnik axborot markazi o‘rtasida" class="w-full max-w-xs rounded-lg shadow-md object-cover h-48">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-200 p-6 items-start rounded-xl   hover:border-blue-300 transition-all duration-300 cursor-pointer bg-gradient-to-r from-white to-gray-50">
+<div class="md:col-span-2 space-y-3">
+<h3 class="text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">HAMKORLIK TO‘G‘RISIDAGI MEMORANDUM Ilmiy-texnik axborot markazi va "Beijing Silk Road Culture Development Co., Ltd." mas’uliyati cheklangan jamiyati o‘rtasida</h3>
+</div>
+<div class="flex justify-center items-start md:items-center">
+<img src="./CSTI5_files/photo_2025-09-02_19-11-10.jpg" alt="HAMKORLIK TO‘G‘RISIDAGI MEMORANDUM Ilmiy-texnik axborot markazi va &quot;Beijing Silk Road Culture Development Co., Ltd.&quot; mas’uliyati cheklangan jamiyati o‘rtasida" class="w-full max-w-xs rounded-lg shadow-md object-cover h-48">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-200 p-6 items-start rounded-xl   hover:border-blue-300 transition-all duration-300 cursor-pointer bg-gradient-to-r from-white to-gray-50">
+<div class="md:col-span-2 space-y-3">
+<h3 class="text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">TOSHKENT SHAHRIDAGI AMITY UNIVERSITETI" MCHJ XK hamda O‘ZBEKISTON RESPUBLIKASI INNOVATSION RIVOJLANISH VAZIRLIGI HUZURIDAGI ILMIY-TEXNIK AXBOROT MARKAZI o‘rtasida HAMKORLIK MEMORANDUMI</h3>
+</div>
+<div class="flex justify-center items-start md:items-center">
+<img src="./CSTI5_files/33.jpg" alt="TOSHKENT SHAHRIDAGI AMITY UNIVERSITETI&quot; MCHJ XK hamda O‘ZBEKISTON RESPUBLIKASI INNOVATSION RIVOJLANISH VAZIRLIGI HUZURIDAGI ILMIY-TEXNIK AXBOROT MARKAZI o‘rtasida HAMKORLIK MEMORANDUMI" class="w-full max-w-xs rounded-lg shadow-md object-cover h-48">
+</div>
+</div> -->
+</div>
+<!--  -->
+</section>
+<!--  -->
+</main>
+</div>
+
+{% endblock %}
