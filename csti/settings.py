@@ -197,7 +197,7 @@ INTERNAL_IPS = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
+    "xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
 ]
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
