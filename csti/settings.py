@@ -38,6 +38,9 @@ CSRF_TRUSTED_ORIGINS = [
     "https://xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
 ]
 
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Application definition
@@ -189,7 +192,7 @@ MEDIA_URL = (
 
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = BASE_DIR / "media"
-MEDIA_URL = '/media/'
+# MEDIA_URL = '/media/'
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
