@@ -51,6 +51,10 @@ INSTALLED_APPS = [
 
 ]
 
+INSTALLED_APPS += [
+    "storages",
+]
+
 
 
 MIDDLEWARE = [
@@ -159,6 +163,24 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+
+
+AZURE_ACCOUNT_NAME = "xzstorage"
+AZURE_ACCOUNT_KEY = "AWR4dQi4YwP3BHOXoYS2R0JCDtS0bgz82Z27asqWvvGkqYJ7frbDahchmc6HMiUNv0Zh9FkpaQbh"
+AZURE_CONTAINER = "media"
+
+DEFAULT_FILE_STORAGE = "storages.backends.azure_storage.AzureStorage"
+
+AZURE_CUSTOM_DOMAIN = (
+    f"{AZURE_ACCOUNT_NAME}.blob.core.windows.net"
+)
+
+MEDIA_URL = (
+    f"https://{AZURE_CUSTOM_DOMAIN}/{AZURE_CONTAINER}/"
+)
+
+
+
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = '/media/'
@@ -172,3 +194,4 @@ LOCALE_PATHS = [
 INTERNAL_IPS = {
     '127.0.0.1',
 }
+

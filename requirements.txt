@@ -9,3 +9,5 @@ Pillow
 django-storages
 boto3
 gunicorn
+django-storages 
+azure-storage-blob
