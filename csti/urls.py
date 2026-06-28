@@ -19,6 +19,8 @@ from django.urls import path, include
 from csti import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import set_language
+from django.urls import path, include
+from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -37,3 +39,11 @@ if settings.DEBUG:
     path('__debug__/', include(debug_toolbar.urls)),
     ] + urlpatterns
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# if not settings.DEBUG:
+#     urlpatterns += [
+#         path(
+#             "media/<path:path>",
+#             serve,
+#             {"document_root": settings.MEDIA_ROOT},
+#         ),
+#     ]

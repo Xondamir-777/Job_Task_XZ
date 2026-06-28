@@ -302,17 +302,6 @@ class PublicationsView(Base):
         context['style'] = 'publisher'
 
         context['side_list'] = context['menu']['Nashrlar'] 
-        # {'Nashrlar': {'Nashrlar':{"sub_topic":[], "url": {'exist': True,'src':'publication', 'val': None}}}}
-
-        # for el in Publication.objects.all():
-        #     print(el.title)
-        #     context['side_list']['Nashrlar'][str(el.title)] = {"sub_topic":[
-        #         {'name': "Jurnal soni", "url": {'exist': True,'src':'magazines', 'val': int(el.pk)}},
-        #         {'name': "Tahririyat Kengashi", "url": {'exist': True,'src':'info', 'val': f"editorialBoard_{el.pk}" }},
-        #         {'name': "Umumiy ma'lumotlar", "url": {'exist': True,'src':'info', 'val': f"overall_{el.pk}"}},
-        #     ], "url": {'exist': False,'src':'', 'val': None}}
-        
-        # print(context['side_list'])
         return context
 
 
@@ -325,8 +314,6 @@ class Magazines(PublicationsView):
         context['title'] = 'Jurnallar'
         # context['numbers'] = [1, 2, 4, 16]
         return context
-    # def get_queryset(self):
-    #     return MagazinesUrl.objects.filter(publication=int(self.kwargs['id']))
     
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -335,7 +322,6 @@ class Magazines(PublicationsView):
         start_date = self.request.GET.get('start_date')
         finish_date = self.request.GET.get('finish_date')
         defined_date = self.request.GET.get('defined_date')
-        # el_count = self.request.GET.get('num')
 
         if defined_date:
             queryset = queryset.filter(time_creation__date=start_date)
@@ -423,16 +409,9 @@ class Sources(Base):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Resurslar'
+        context['title'] = context['menu']['Resurslar'].title
         context['style'] = 'post'
         context['side_list'] = context['menu']['Resurslar'] 
-        # {'Resurslar': {
-        #     'Axborot tizimlari':{"sub_topic":[], "url": {'exist': True,'src':'src', 'val': 'service'}},
-        #     'Jurnallar':{"sub_topic":[], "url": {'exist': True,'src':'src', 'val': 'subscription'}},
-        #     "Ma'lumotlarni tahlil qilish":{"sub_topic":[], "url": {'exist': True,'src':'src', 'val': "data-boards"}}
-        #     }}
-        
-        # print(context['side_list'])
         return context
     def get_template_names(self):
         page = self.kwargs.get('page')
