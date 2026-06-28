@@ -34,6 +34,11 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
+]
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Application definition
 
@@ -195,9 +200,3 @@ LOCALE_PATHS = [
 INTERNAL_IPS = {
     '127.0.0.1',
 }
-
-CSRF_TRUSTED_ORIGINS = [
-    "xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
-]
-
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
