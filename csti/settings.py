@@ -25,12 +25,13 @@ SECRET_KEY ='django-insecure-7%l)=nrx6j@nm+td&9t7s1j4gnlv82v_1^c89f*-@d0(m6kiml'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = os.getenv("DEBUG") == "True"
-DEBUG = False
+DEBUG = True
 #ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 # ALLOWED_HOSTS = ['127.0.0.1']
 ALLOWED_HOSTS = [
     "csti.azurewebsites.net",
     "xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
+    '127.0.0.1',
 ]
 
 
