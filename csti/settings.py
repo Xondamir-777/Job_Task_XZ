@@ -25,7 +25,7 @@ SECRET_KEY ='django-insecure-7%l)=nrx6j@nm+td&9t7s1j4gnlv82v_1^c89f*-@d0(m6kiml'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = os.getenv("DEBUG") == "True"
-DEBUG = True
+DEBUG = False
 #ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 # ALLOWED_HOSTS = ['127.0.0.1']
 ALLOWED_HOSTS = [
@@ -178,7 +178,15 @@ AZURE_ACCOUNT_NAME = "xzstorage"
 AZURE_ACCOUNT_KEY = "AWR4dQi4YwP3BHOXoYS2R0JCDtS0bgz82Z27asqWvvGkqYJ7frbDahchmc6HMiUNv0Zh9FkpaQbh"
 AZURE_CONTAINER = "media"
 
-DEFAULT_FILE_STORAGE = "storages.backends.azure_storage.AzureStorage"
+# DEFAULT_FILE_STORAGE = "storages.backends.azure_storage.AzureStorage"
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.azure_storage.AzureStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 AZURE_CUSTOM_DOMAIN = (
     f"{AZURE_ACCOUNT_NAME}.blob.core.windows.net"
