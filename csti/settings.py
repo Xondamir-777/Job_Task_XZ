@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from azure.storage.blob import BlobServiceClient
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -177,7 +178,7 @@ STATICFILES_DIRS = [
 
 
 AZURE_ACCOUNT_NAME = "xzstorage"
-AZURE_ACCOUNT_KEY = "AWR4dQi4YwP3BHOXoYS2R0JCDtS0bgz82Z27asqWvvGkqYJ7frbDahchmc6HMiUNv0Zh9FkpaQbh"
+AZURE_ACCOUNT_KEY = "AWR4dQi4YwP3BHOXoYS2R0JCDtS0bgz82Z27asqWvvGkqYJ7frbDahchmc6HMiUNv0Zh9FkpaQbh+AStTNQa8w=="
 AZURE_CONTAINER = "media"
 
 # DEFAULT_FILE_STORAGE = "storages.backends.azure_storage.AzureStorage"

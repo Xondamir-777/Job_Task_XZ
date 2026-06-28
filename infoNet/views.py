@@ -224,7 +224,7 @@ class ourPartners(Base):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         #context['menu']["Hamkorlik"]['url'] = 'partners'
-        context['title'] = 'Hamkorlar'
+        context['title'] = context['menu']['Hamkorlik'].title
         context['style'] = 'partners'
 
         context['side_list'] = context['menu']['Hamkorlik']
