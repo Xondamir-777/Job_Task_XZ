@@ -196,3 +196,6 @@ INTERNAL_IPS = {
     '127.0.0.1',
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
+]
