@@ -31,11 +31,13 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "csti.azurewebsites.net",
     "xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
+    "xz7-fdgtgbckevf6a0hs.centralindia-01.azurewebsites.net",
     '127.0.0.1',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
+    "https://xz7-fdgtgbckevf6a0hs.centralindia-01.azurewebsites.net",
 ]
 
 CSRF_COOKIE_SECURE = True
