@@ -29,7 +29,8 @@ DEBUG = False
 #ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 # ALLOWED_HOSTS = ['127.0.0.1']
 ALLOWED_HOSTS = [
-    "mydjango.azurewebsites.net"
+    "csti.azurewebsites.net",
+    "xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
 ]
 
 
@@ -43,12 +44,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'modeltranslation',
-    'debug_toolbar',
+    # 'debug_toolbar',
     'infoNet.apps.InfonetConfig',
     "ckeditor",
     "ckeditor_uploader"
 
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -60,8 +63,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
+
+if DEBUG:
+    INSTALLED_APPS += ["debug_toolbar"]
+    MIDDLEWARE += ["debug_toolbar.middleware.DebugToolbarMiddleware"]
 
 ROOT_URLCONF = 'csti.urls'
 
@@ -144,9 +151,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 import os
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = BASE_DIR / "media"
