@@ -33,12 +33,14 @@ ALLOWED_HOSTS = [
     "csti.azurewebsites.net",
     "xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
     "xz7-fdgtgbckevf6a0hs.centralindia-01.azurewebsites.net",
+    "job-task-xz-6.onrender.com",
     '127.0.0.1',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
     "https://xz7-fdgtgbckevf6a0hs.centralindia-01.azurewebsites.net",
+    "https://job-task-xz-6.onrender.com",
 ]
 
 CSRF_COOKIE_SECURE = True
