@@ -1,7 +1,5 @@
 {% load i18n %}
 
-{% load cache %}
-{% cache 600 menu %}
 {% if style == "post" %}
 <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8 shadow-sm hover:shadow-md transition-shadow duration-300">
 <a href="{{ el.url }}" target="_blank" rel="noopener noreferrer">
@@ -20,8 +18,8 @@
 
 </div>
 </div>
-{% elif style == "news" %}
 
+{% elif style == "news" %}
 <a href="{% url 'new' el.pk %}">
 <div class="flex flex-col gap-2 !border-gray-200 md:flex-row border shadow-lg transition-shadow duration-300 ease-in-out bg-white p-4 rounded-lg cursor-pointer">
 <img src="{{ el.photos.all.0.photo.url }}" alt="{{ el.title }}" class="rounded-md w-full md:w-[40%] h-32 object-cover">
@@ -43,8 +41,8 @@
 </div>
 </div>
 </a>
-{% elif style == "magazines" %}
 
+{% elif style == "magazines" %}
 <div class="bg-gray-100 p-2 rounded-lg shadow">
 <img src="{{ el.photo.url }}" alt="Muqova" class="rounded w-full h-80 object-cover mb-2">
 <a href="{{ el.url }}" target="_blank" rel="noopener noreferrer" class="block text-blue-600 hover:underline text-sm">{% trans "Yuklab olish" %}</a>
@@ -88,7 +86,6 @@
 </div>
 
 {% elif style == "video" %}
-
 <div class="flex flex-col shadow-lg transition-shadow duration-300 ease-in-out bg-white p-4 rounded-lg cursor-pointer">
 <iframe class="rounded-2xl object-cover w-full" width="560" height="315" src="{{ el.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
 </iframe>
@@ -142,7 +139,6 @@ document.getElementById("btn-{{ el.pk }}").addEventListener("click", () => {
 </div>
 
 {% elif style == "partners" %}
-
 <a href="{% url 'partnerID' el.pk %}">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-200 p-6 items-start rounded-xl hover:border-blue-300 transition-all duration-300 cursor-pointer bg-gradient-to-r from-white to-gray-50">
 <div class="md:col-span-2 space-y-3">
@@ -154,5 +150,5 @@ document.getElementById("btn-{{ el.pk }}").addEventListener("click", () => {
 </div>
 </div>
 </a>
+
 {% endif %}
-{% endcache %}
