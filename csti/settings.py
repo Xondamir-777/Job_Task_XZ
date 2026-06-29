@@ -21,21 +21,27 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
-# SECRET_KEY ='django-insecure-7%l)=nrx6j@nm+td&9t7s1j4gnlv82v_1^c89f*-@d0(m6kiml'
+# SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY ='django-insecure-7%l)=nrx6j@nm+td&9t7s1j4gnlv82v_1^c89f*-@d0(m6kiml'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG") == "True"
-# DEBUG = False
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
-# ALLOWED_HOSTS = ['127.0.0.1']
-ALLOWED_HOSTS += [
+# DEBUG = os.getenv("DEBUG") == "True"
+DEBUG = True
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",") + [
     "csti.azurewebsites.net",
     "xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
     "xz7-fdgtgbckevf6a0hs.centralindia-01.azurewebsites.net",
     "job-task-xz-6.onrender.com",
     '127.0.0.1',
 ]
+# ALLOWED_HOSTS = ['127.0.0.1']
+# ALLOWED_HOSTS = [
+#     "csti.azurewebsites.net",
+#     "xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
+#     "xz7-fdgtgbckevf6a0hs.centralindia-01.azurewebsites.net",
+#     "job-task-xz-6.onrender.com",
+#     '127.0.0.1',
+# ]
 
 # CSRF_TRUSTED_ORIGINS = [
 #     "https://xz-cthdemfuecd3gmgt.centralindia-01.azurewebsites.net",
@@ -44,6 +50,7 @@ ALLOWED_HOSTS += [
 # ]
 
 CSRF_TRUSTED_ORIGINS = [f"https://{host}" for host in ALLOWED_HOSTS]
+print("CSRF_TRUSTED_ORIGINS:", CSRF_TRUSTED_ORIGINS)
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
