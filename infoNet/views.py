@@ -223,12 +223,16 @@ class ourPartners(Base):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        #context['menu']["Hamkorlik"]['url'] = 'partners'
         context['title'] = context['menu']['Hamkorlik'].title
-        context['style'] = 'partners'
+        context['style'] = "partners"
 
         context['side_list'] = context['menu']['Hamkorlik']
         return context
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        return queryset
+
 
 class partnerID(ourPartners):
     template_name = 'showInfoPage.html'

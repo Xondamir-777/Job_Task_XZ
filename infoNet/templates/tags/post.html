@@ -18,7 +18,7 @@
 </div>
 </div>
 {% elif style == "news" %}
-{% load static %}
+
 <a href="{% url 'new' el.pk %}">
 <div class="flex flex-col gap-2 !border-gray-200 md:flex-row border shadow-lg transition-shadow duration-300 ease-in-out bg-white p-4 rounded-lg cursor-pointer">
 <img src="{{ el.photos.all.0.photo.url }}" alt="{{ el.title }}" class="rounded-md w-full md:w-[40%] h-32 object-cover">
@@ -41,7 +41,6 @@
 </div>
 </a>
 {% elif style == "magazines" %}
-{% load static %}
 
 <div class="bg-gray-100 p-2 rounded-lg shadow">
 <img src="{{ el.photo.url }}" alt="Muqova" class="rounded w-full h-80 object-cover mb-2">
@@ -140,14 +139,15 @@ document.getElementById("btn-{{ el.pk }}").addEventListener("click", () => {
 </div>
 
 {% elif style == "partners" %}
+
 <a href="{% url 'partnerID' el.pk %}">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-200 p-6 items-start rounded-xl   hover:border-blue-300 transition-all duration-300 cursor-pointer bg-gradient-to-r from-white to-gray-50">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-200 p-6 items-start rounded-xl hover:border-blue-300 transition-all duration-300 cursor-pointer bg-gradient-to-r from-white to-gray-50">
 <div class="md:col-span-2 space-y-3">
 <h3 class="text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">{{ el.title }}</h3>
 </div>
 <div class="flex justify-center items-start md:items-center">
 <img src="{{ el.photo.url }}" alt="{{ el.title }}" class="w-full max-w-xs rounded-lg shadow-md object-cover h-48">
-<!-- {% static p.photo %} -->
+
 </div>
 </div>
 </a>
