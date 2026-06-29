@@ -13,6 +13,7 @@ admin.site.register(Brochures)
 admin.site.register(UsersMessage)
 admin.site.register(Leadership)
 admin.site.register(AboutUs)
+admin.site.register(InfoSySsrc)
 
 
 class PhotostInline(admin.TabularInline):
