@@ -1,4 +1,7 @@
 {% load i18n %}
+
+{% load cache %}
+{% cache 600 menu %}
 {% if style == "post" %}
 <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8 shadow-sm hover:shadow-md transition-shadow duration-300">
 <a href="{{ el.url }}" target="_blank" rel="noopener noreferrer">
@@ -152,3 +155,4 @@ document.getElementById("btn-{{ el.pk }}").addEventListener("click", () => {
 </div>
 </a>
 {% endif %}
+{% endcache %}

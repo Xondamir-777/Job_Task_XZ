@@ -6,7 +6,9 @@
 <!DOCTYPE html>
 <!-- saved from url=(0016)https://csti.uz/ -->
 <html lang="en">
+  {% cache 600 menu_big %}
 <head>
+  
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style data-rc-order="prepend" rc-util-key="@ant-design-icons">
 .anticon {
@@ -113,11 +115,13 @@
 <!-- <link rel="modulepreload" as="script" crossorigin="" href="https://csti.uz/assets/Home-Dl7BWlwa.js"> -->
 <link rel="stylesheet" crossorigin="" href="{% static 'css/Home-oeFJfWW0.css' %}">
 </head>
+{% endcache %}
 <body>
 <div id="root">
 {% block mainmenu %}
 {% get_contact_info as our_contacts %}
   <div class="w-full flex flex-col min-h-screen justify-between relative">
+    {% cache 600 menu %}
     <nav {% if blur %}id="menu_style"{% endif %} class="w-full static  backdrop-blur-md px-2 md:px-0 transition-all duration-500 ease-in-out ">
       <div class="fullContainer flex justify-between items-center py-2 gap-1  transition-all duration-500">
         <a class="flex items-center text-current active" href="{% url 'home' %}" aria-current="page">
@@ -130,7 +134,7 @@
 
 <ul class="ant-menu-overflow ant-menu ant-menu-root ant-menu-horizontal ant-menu-light uppercase font-bold flex justify-end items-center !bg-transparent !text-white  css-cdzvx5" role="menu" tabindex="0" data-menu-list="true">
          
-  {% cache 600 menu %}
+  
   {% for key, value in menu.items %}
         <li class="ant-menu-overflow-item ant-menu-item ant-menu-item-only-child" role="menuitem" tabindex="-1" data-menu-id="{{ value.data_menu_id.0 }}1{{ value.data_menu_id.1 }}" style="opacity: 1; order: {{ forloop.counter0 }};">
             <span class="ant-menu-title-content">
@@ -142,7 +146,7 @@
             </span>
           </li>
           {% endfor %}
-  {% endcache %}
+
         <!-- <li class="ant-menu-overflow-item ant-menu-item ant-menu-item-only-child" role="menuitem" tabindex="-1" data-menu-id="rc-menu-uuid-36672-1-about" style="opacity: 1; order: 0;">
             <span class="ant-menu-title-content">
               <span class="!text-white">Markaz</span>
@@ -233,7 +237,7 @@
 </div>
 </div>
 <!--  -->
-{% cache 600 menu_big %}
+
 <div id="menu_scroll" class="lg:hidden transition-all duration-500 ease-in-out max-h-0 overflow-hidden">
 <!-- lg:hidden transition-all duration-500 ease-in-out max-h-[85vh] py-2 px-4 bg-white text-black overflow-y-auto -->
 <!-- lg:hidden transition-all duration-500 ease-in-out max-h-0 overflow-hidden -->
@@ -416,12 +420,15 @@
 <div aria-hidden="true" style="display: none;">
 </div>
 </div>
-{% endcache %}
+
 </nav>
+{% endcache %}
 <!--  -->
 {% block content %}
 {% endblock %}
 <!--  -->
+
+{% cache 600 footer %}
 <footer class="bg-[#0C57A6] border-t">
 <div class="fullContainer mx-auto px-4 py-6">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -538,6 +545,7 @@ for (const item of links) {
 </div>
 <div class="bg-primary border-t text-gray-300 text-sm text-center py-1">© 2025 CSTI. Last revised on April 21, 2025. All rights reserved. Developed by AKT. {{ video_links }}</div>
 </footer>
+{% endcache %}
 <!--  -->
 </div>
 {% endblock mainmenu %}
